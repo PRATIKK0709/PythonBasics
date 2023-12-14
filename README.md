@@ -15,8 +15,8 @@
 Welcome to the world of Python! Python is a versatile programming language known for its simplicity and readability. This guide will help you get started and understand the basics.
 
 ## Python Intro
-Python is an interpreted, high-level, general-purpose programming language. Let's start with a simple "Hello, World!" example:
+Python is an interpreted, high-level, general-purpose programming language. Let's start with a simple "Hello, PEACE!" example:
 
 ```python
-print("Hello, World!")
+print("Hello, PEACE!")
 ```
