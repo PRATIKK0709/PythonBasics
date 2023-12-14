@@ -20,3 +20,17 @@ Python is an interpreted, high-level, general-purpose programming language. Let'
 ```python
 print("Hello, PEACE!")
 ```
+
+## Python Syntax
+
+Python has a clean and straightforward syntax. Indentation is crucial for defining blocks of code. Here's a basic if-else statement:
+
+```
+Copy code
+x = 10
+
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is not greater than 5")
+```
