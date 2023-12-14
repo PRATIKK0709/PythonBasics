@@ -26,7 +26,6 @@ print("Hello, PEACE!")
 Python has a clean and straightforward syntax. Indentation is crucial for defining blocks of code. Here's a basic if-else statement:
 
 ```
-Copy code
 x = 10
 
 if x > 5:
