@@ -1,0 +1,2590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Documentation - Beginner to Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>Python Docs</h1>
+                <p>Beginner to Professional</p>
+            </div>
+
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search documentation..." id="searchInput">
+            </div>
+
+            <div class="bookmarks-section" id="bookmarksSection" style="display: none;">
+                <div class="nav-title">Bookmarks</div>
+                <div id="bookmarksList"></div>
+            </div>
+
+            <div class="nav">
+                <div class="nav-section">
+                    <div class="nav-title">Getting Started</div>
+                    <a href="#introduction" class="nav-link">Introduction</a>
+                    <a href="#installation" class="nav-link">Installation</a>
+                    <a href="#first-program" class="nav-link">Your First Program</a>
+                    <a href="#syntax" class="nav-link">Python Syntax</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Basics</div>
+                    <a href="#variables" class="nav-link">Variables</a>
+                    <a href="#data-types" class="nav-link">Data Types</a>
+                    <a href="#operators" class="nav-link">Operators</a>
+                    <a href="#strings" class="nav-link">Strings</a>
+                    <a href="#numbers" class="nav-link">Numbers</a>
+                    <a href="#booleans" class="nav-link">Booleans</a>
+                    <a href="#type-conversion" class="nav-link">Type Conversion</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Data Structures</div>
+                    <a href="#lists" class="nav-link">Lists</a>
+                    <a href="#tuples" class="nav-link">Tuples</a>
+                    <a href="#sets" class="nav-link">Sets</a>
+                    <a href="#dictionaries" class="nav-link">Dictionaries</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Control Flow</div>
+                    <a href="#if-else" class="nav-link">If/Else Statements</a>
+                    <a href="#for-loops" class="nav-link">For Loops</a>
+                    <a href="#while-loops" class="nav-link">While Loops</a>
+                    <a href="#break-continue" class="nav-link">Break & Continue</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Functions</div>
+                    <a href="#functions" class="nav-link">Functions Basics</a>
+                    <a href="#parameters" class="nav-link">Parameters & Arguments</a>
+                    <a href="#return-values" class="nav-link">Return Values</a>
+                    <a href="#lambda" class="nav-link">Lambda Functions</a>
+                    <a href="#decorators" class="nav-link">Decorators</a>
+                    <a href="#generators" class="nav-link">Generators</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Object-Oriented Programming</div>
+                    <a href="#classes" class="nav-link">Classes & Objects</a>
+                    <a href="#inheritance" class="nav-link">Inheritance</a>
+                    <a href="#polymorphism" class="nav-link">Polymorphism</a>
+                    <a href="#encapsulation" class="nav-link">Encapsulation</a>
+                    <a href="#magic-methods" class="nav-link">Magic Methods</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Advanced Topics</div>
+                    <a href="#file-handling" class="nav-link">File Handling</a>
+                    <a href="#exception-handling" class="nav-link">Exception Handling</a>
+                    <a href="#modules" class="nav-link">Modules & Packages</a>
+                    <a href="#virtual-env" class="nav-link">Virtual Environments</a>
+                    <a href="#pip" class="nav-link">Package Management (pip)</a>
+                    <a href="#async" class="nav-link">Async Programming</a>
+                    <a href="#threading" class="nav-link">Threading & Multiprocessing</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Standard Library</div>
+                    <a href="#os-module" class="nav-link">OS Module</a>
+                    <a href="#datetime" class="nav-link">Datetime</a>
+                    <a href="#json" class="nav-link">JSON</a>
+                    <a href="#regex" class="nav-link">Regular Expressions</a>
+                    <a href="#pathlib" class="nav-link">Pathlib</a>
+                    <a href="#collections" class="nav-link">Collections</a>
+                    <a href="#itertools" class="nav-link">Itertools</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Web Development</div>
+                    <a href="#requests" class="nav-link">HTTP Requests</a>
+                    <a href="#flask-intro" class="nav-link">Flask Basics</a>
+                    <a href="#fastapi-intro" class="nav-link">FastAPI Basics</a>
+                    <a href="#web-scraping" class="nav-link">Web Scraping</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Discord Bot Development</div>
+                    <a href="#discord-intro" class="nav-link">Introduction to discord.py</a>
+                    <a href="#discord-setup" class="nav-link">Bot Setup & Authentication</a>
+                    <a href="#discord-basic-bot" class="nav-link">Creating Your First Bot</a>
+                    <a href="#discord-commands" class="nav-link">Commands & Events</a>
+                    <a href="#discord-cogs" class="nav-link">Cogs & Extensions</a>
+                    <a href="#discord-embeds" class="nav-link">Embeds & Rich Messages</a>
+                    <a href="#discord-permissions" class="nav-link">Permissions & Roles</a>
+                    <a href="#discord-database" class="nav-link">Database Integration</a>
+                    <a href="#discord-slash-commands" class="nav-link">Slash Commands</a>
+                    <a href="#discord-voice" class="nav-link">Voice Channels & Audio</a>
+                    <a href="#discord-advanced" class="nav-link">Advanced Patterns</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Data Science</div>
+                    <a href="#numpy" class="nav-link">NumPy Basics</a>
+                    <a href="#pandas" class="nav-link">Pandas Basics</a>
+                    <a href="#matplotlib" class="nav-link">Data Visualization</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Best Practices</div>
+                    <a href="#pep8" class="nav-link">PEP 8 Style Guide</a>
+                    <a href="#testing" class="nav-link">Unit Testing</a>
+                    <a href="#debugging" class="nav-link">Debugging</a>
+                    <a href="#performance" class="nav-link">Performance Optimization</a>
+                    <a href="#security" class="nav-link">Security Best Practices</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-title">Resources</div>
+                    <a href="#cheatsheet" class="nav-link">Quick Reference</a>
+                    <a href="#common-errors" class="nav-link">Common Errors</a>
+                    <a href="#external-resources" class="nav-link">External Resources</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="content">
+                <!-- Getting Started -->
+                <section id="introduction">
+                    <h1>Python Documentation</h1>
+                    <div class="breadcrumb">
+                        <a href="#introduction">Home</a> / Introduction
+                    </div>
+                    <p>Welcome to the complete Python documentation. This guide will take you from absolute beginner to
+                        professional Python developer. Everything you need in one place.</p>
+
+                    <h3>What is Python?</h3>
+                    <p>Python is a high-level, interpreted programming language known for its simplicity and
+                        readability. Created by Guido van Rossum in 1991, it emphasizes code readability and allows
+                        developers to express concepts in fewer lines of code.</p>
+
+                    <h3>Why Learn Python?</h3>
+                    <ul>
+                        <li><strong>Easy to Learn:</strong> Simple, readable syntax similar to English</li>
+                        <li><strong>Versatile:</strong> Web development, data science, automation, AI/ML, scripting</li>
+                        <li><strong>Huge Ecosystem:</strong> Over 400,000 packages available via PyPI</li>
+                        <li><strong>Industry Demand:</strong> Used by Google, Netflix, Instagram, NASA, Spotify</li>
+                        <li><strong>Great Community:</strong> Massive support network and resources</li>
+                    </ul>
+
+                    <h3>What You'll Learn</h3>
+                    <p>This documentation covers:</p>
+                    <ul>
+                        <li>Python fundamentals and syntax</li>
+                        <li>Data structures and algorithms</li>
+                        <li>Object-oriented programming</li>
+                        <li>File operations and exception handling</li>
+                        <li>Web development with Flask and FastAPI</li>
+                        <li>Discord bot development with discord.py</li>
+                        <li>Data science with NumPy and Pandas</li>
+                        <li>Async programming and concurrency</li>
+                        <li>Best practices and professional patterns</li>
+                    </ul>
+                </section>
+
+                <section id="installation">
+                    <h2>Installation <a href="#installation" class="anchor">#</a></h2>
+
+                    <h3>Windows</h3>
+                    <pre><code># Download from python.org
+# Run installer and check "Add Python to PATH"
+# Verify installation
+python --version
+pip --version</code></pre>
+
+                    <h3>macOS</h3>
+                    <pre><code># Using Homebrew (recommended)
+brew install python3
+
+# Verify installation
+python3 --version
+pip3 --version</code></pre>
+
+                    <h3>Linux</h3>
+                    <pre><code># Ubuntu/Debian
+sudo apt update
+sudo apt install python3 python3-pip
+
+# Fedora
+sudo dnf install python3 python3-pip
+
+# Verify installation
+python3 --version
+pip3 --version</code></pre>
+
+                    <div class="info-box">
+                        <p><strong>Note:</strong> Python 3.8+ is recommended. Python 2 is deprecated and should not be
+                            used for new projects.</p>
+                    </div>
+                </section>
+
+                <section id="first-program">
+                    <h2>Your First Program <a href="#first-program" class="anchor">#</a></h2>
+                    <p>Let's write the traditional "Hello, World!" program:</p>
+
+                    <pre><code><span class="keyword">print</span>(<span class="string">"Hello, World!"</span>)</code></pre>
+
+                    <h3>Running Python Code</h3>
+                    <p>There are several ways to run Python code:</p>
+
+                    <h4>1. Interactive Shell (REPL)</h4>
+                    <pre><code># Start Python shell
+python3
+
+# Type code directly
+>>> print("Hello!")
+Hello!
+>>> 2 + 2
+4</code></pre>
+
+                    <h4>2. Script Files</h4>
+                    <pre><code># Create a file: hello.py
+print("Hello, World!")
+
+# Run it
+python3 hello.py</code></pre>
+
+                    <h4>3. IDE/Code Editor</h4>
+                    <p>Popular choices:</p>
+                    <ul>
+                        <li><strong>VS Code:</strong> Lightweight, powerful extensions</li>
+                        <li><strong>PyCharm:</strong> Full-featured Python IDE</li>
+                        <li><strong>Jupyter Notebook:</strong> Interactive, great for data science</li>
+                        <li><strong>Vim/Neovim:</strong> Terminal-based, highly efficient</li>
+                    </ul>
+                </section>
+
+                <section id="syntax">
+                    <h2>Python Syntax <a href="#syntax" class="anchor">#</a></h2>
+
+                    <h3>Indentation</h3>
+                    <p>Python uses indentation to define code blocks. This is not optional.</p>
+
+                    <pre><code><span class="comment"># Correct</span>
+<span class="keyword">if</span> <span class="number">5</span> > <span class="number">3</span>:
+    <span class="keyword">print</span>(<span class="string">"Five is greater"</span>)
+    <span class="keyword">print</span>(<span class="string">"This is also in the block"</span>)
+
+<span class="comment"># Wrong - IndentationError</span>
+<span class="keyword">if</span> <span class="number">5</span> > <span class="number">3</span>:
+<span class="keyword">print</span>(<span class="string">"This will fail"</span>)</code></pre>
+
+                    <div class="info-box">
+                        <p><strong>Standard:</strong> Use 4 spaces for indentation (PEP 8). Most editors can convert
+                            tabs to spaces automatically.</p>
+                    </div>
+
+                    <h3>Comments</h3>
+                    <pre><code><span class="comment"># Single line comment</span>
+
+<span class="string">"""
+Multi-line comment
+or docstring
+"""</span>
+
+x = <span class="number">5</span>  <span class="comment"># Inline comment</span></code></pre>
+
+                    <h3>Line Continuation</h3>
+                    <pre><code><span class="comment"># Using backslash</span>
+total = <span class="number">1</span> + <span class="number">2</span> + <span class="number">3</span> + \
+        <span class="number">4</span> + <span class="number">5</span>
+
+<span class="comment"># Implicit continuation (preferred)</span>
+total = (<span class="number">1</span> + <span class="number">2</span> + <span class="number">3</span> +
+         <span class="number">4</span> + <span class="number">5</span>)</code></pre>
+
+                    <h3>Multiple Statements</h3>
+                    <pre><code><span class="comment"># Multiple statements on one line (avoid)</span>
+x = <span class="number">5</span>; y = <span class="number">10</span>; <span class="keyword">print</span>(x + y)
+
+<span class="comment"># Better: one per line</span>
+x = <span class="number">5</span>
+y = <span class="number">10</span>
+<span class="keyword">print</span>(x + y)</code></pre>
+                </section>
+
+                <!-- BASICS -->
+                <section id="variables">
+                    <h2>Variables <a href="#variables" class="anchor">#</a></h2>
+                    <p>Variables are containers for storing data values. Python is dynamically typed - you don't need to
+                        declare types.</p>
+
+                    <h3>Creating Variables</h3>
+                    <pre><code><span class="comment"># Simple assignment</span>
+x = <span class="number">5</span>
+name = <span class="string">"John"</span>
+is_valid = <span class="keyword">True</span>
+
+<span class="comment"># Multiple assignment</span>
+a, b, c = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>
+
+<span class="comment"># Same value to multiple variables</span>
+x = y = z = <span class="number">0</span></code></pre>
+
+                    <h3>Naming Rules</h3>
+                    <ul>
+                        <li>Must start with a letter or underscore</li>
+                        <li>Can contain letters, numbers, and underscores</li>
+                        <li>Case-sensitive (<code>age</code> and <code>Age</code> are different)</li>
+                        <li>Cannot use Python keywords</li>
+                    </ul>
+
+                    <pre><code><span class="comment"># Valid names</span>
+user_name = <span class="string">"Alice"</span>
+age2 = <span class="number">25</span>
+_private = <span class="number">42</span>
+CONSTANT = <span class="number">100</span>
+
+<span class="comment"># Invalid names</span>
+<span class="comment"># 2age = 25        # Can't start with number</span>
+<span class="comment"># user-name = "A"  # Can't use hyphen</span>
+<span class="comment"># class = "math"   # Can't use keyword</span></code></pre>
+
+                    <h3>Naming Conventions (PEP 8)</h3>
+                    <pre><code><span class="comment"># snake_case for variables and functions</span>
+user_count = <span class="number">100</span>
+<span class="keyword">def</span> <span class="function">calculate_total</span>():
+    <span class="keyword">pass</span>
+
+<span class="comment"># UPPER_CASE for constants</span>
+MAX_SIZE = <span class="number">1000</span>
+API_KEY = <span class="string">"abc123"</span>
+
+<span class="comment"># PascalCase for classes</span>
+<span class="keyword">class</span> <span class="function">UserAccount</span>:
+    <span class="keyword">pass</span></code></pre>
+                </section>
+
+                <section id="data-types">
+                    <h2>Data Types <a href="#data-types" class="anchor">#</a></h2>
+                    <p>Python has several built-in data types for different kinds of values.</p>
+
+                    <h3>Numeric Types</h3>
+                    <pre><code><span class="comment"># Integer</span>
+age = <span class="number">25</span>
+count = <span class="number">-10</span>
+big_num = <span class="number">1_000_000</span>  <span class="comment"># Underscores for readability</span>
+
+<span class="comment"># Float</span>
+price = <span class="number">19.99</span>
+pi = <span class="number">3.14159</span>
+scientific = <span class="number">1.5e-4</span>  <span class="comment"># 0.00015</span>
+
+<span class="comment"># Complex</span>
+z = <span class="number">3</span> + <span class="number">4j</span></code></pre>
+
+                    <h3>Text Type</h3>
+                    <pre><code><span class="comment"># String</span>
+name = <span class="string">"Alice"</span>
+message = <span class="string">'Hello, World!'</span>
+multiline = <span class="string">"""This is a
+multi-line string"""</span></code></pre>
+
+                    <h3>Boolean Type</h3>
+                    <pre><code>is_active = <span class="keyword">True</span>
+is_valid = <span class="keyword">False</span></code></pre>
+
+                    <h3>Sequence Types</h3>
+                    <pre><code><span class="comment"># List (mutable)</span>
+numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]
+mixed = [<span class="number">1</span>, <span class="string">"hello"</span>, <span class="keyword">True</span>, <span class="number">3.14</span>]
+
+<span class="comment"># Tuple (immutable)</span>
+coordinates = (<span class="number">10</span>, <span class="number">20</span>)
+rgb = (<span class="number">255</span>, <span class="number">0</span>, <span class="number">128</span>)
+
+<span class="comment"># Range</span>
+nums = <span class="function">range</span>(<span class="number">10</span>)  <span class="comment"># 0 to 9</span></code></pre>
+
+                    <h3>Mapping Type</h3>
+                    <pre><code><span class="comment"># Dictionary</span>
+user = {
+    <span class="string">"name"</span>: <span class="string">"Alice"</span>,
+    <span class="string">"age"</span>: <span class="number">25</span>,
+    <span class="string">"city"</span>: <span class="string">"New York"</span>
+}</code></pre>
+
+                    <h3>Set Types</h3>
+                    <pre><code><span class="comment"># Set (unordered, unique)</span>
+unique_nums = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>}
+
+<span class="comment"># Frozenset (immutable set)</span>
+frozen = <span class="function">frozenset</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</code></pre>
+
+                    <h3>None Type</h3>
+                    <pre><code>result = <span class="keyword">None</span>  <span class="comment"># Represents absence of value</span></code></pre>
+
+                    <h3>Checking Types</h3>
+                    <pre><code>x = <span class="number">42</span>
+<span class="keyword">print</span>(<span class="function">type</span>(x))  <span class="comment"># <class 'int'></span>
+
+<span class="comment"># Type checking</span>
+<span class="keyword">print</span>(<span class="function">isinstance</span>(x, <span class="function">int</span>))  <span class="comment"># True</span>
+<span class="keyword">print</span>(<span class="function">isinstance</span>(x, <span class="function">str</span>))  <span class="comment"># False</span></code></pre>
+                </section>
+
+                <section id="operators">
+                    <h2>Operators <a href="#operators" class="anchor">#</a></h2>
+
+                    <h3>Arithmetic Operators</h3>
+                    <pre><code>a = <span class="number">10</span>
+b = <span class="number">3</span>
+
+<span class="keyword">print</span>(a + b)   <span class="comment"># 13 - Addition</span>
+<span class="keyword">print</span>(a - b)   <span class="comment"># 7  - Subtraction</span>
+<span class="keyword">print</span>(a * b)   <span class="comment"># 30 - Multiplication</span>
+<span class="keyword">print</span>(a / b)   <span class="comment"># 3.333... - Division</span>
+<span class="keyword">print</span>(a // b)  <span class="comment"># 3  - Floor Division</span>
+<span class="keyword">print</span>(a % b)   <span class="comment"># 1  - Modulus</span>
+<span class="keyword">print</span>(a ** b)  <span class="comment"># 1000 - Exponentiation</span></code></pre>
+
+                    <h3>Comparison Operators</h3>
+                    <pre><code>x = <span class="number">5</span>
+y = <span class="number">10</span>
+
+<span class="keyword">print</span>(x == y)  <span class="comment"># False - Equal</span>
+<span class="keyword">print</span>(x != y)  <span class="comment"># True  - Not equal</span>
+<span class="keyword">print</span>(x > y)   <span class="comment"># False - Greater than</span>
+<span class="keyword">print</span>(x < y)   <span class="comment"># True  - Less than</span>
+<span class="keyword">print</span>(x >= y)  <span class="comment"># False - Greater or equal</span>
+<span class="keyword">print</span>(x <= y)  <span class="comment"># True  - Less or equal</span></code></pre>
+
+                    <h3>Logical Operators</h3>
+                    <pre><code>a = <span class="keyword">True</span>
+b = <span class="keyword">False</span>
+
+<span class="keyword">print</span>(a <span class="keyword">and</span> b)  <span class="comment"># False</span>
+<span class="keyword">print</span>(a <span class="keyword">or</span> b)   <span class="comment"># True</span>
+<span class="keyword">print</span>(<span class="keyword">not</span> a)     <span class="comment"># False</span></code></pre>
+
+                    <h3>Assignment Operators</h3>
+                    <pre><code>x = <span class="number">10</span>
+x += <span class="number">5</span>   <span class="comment"># x = x + 5</span>
+x -= <span class="number">3</span>   <span class="comment"># x = x - 3</span>
+x *= <span class="number">2</span>   <span class="comment"># x = x * 2</span>
+x /= <span class="number">4</span>   <span class="comment"># x = x / 4</span>
+x //= <span class="number">2</span>  <span class="comment"># x = x // 2</span>
+x %= <span class="number">3</span>   <span class="comment"># x = x % 3</span>
+x **= <span class="number">2</span>  <span class="comment"># x = x ** 2</span></code></pre>
+
+                    <h3>Membership Operators</h3>
+                    <pre><code>fruits = [<span class="string">"apple"</span>, <span class="string">"banana"</span>, <span class="string">"cherry"</span>]
+
+<span class="keyword">print</span>(<span class="string">"apple"</span> <span class="keyword">in</span> fruits)      <span class="comment"># True</span>
+<span class="keyword">print</span>(<span class="string">"grape"</span> <span class="keyword">not in</span> fruits)  <span class="comment"># True</span></code></pre>
+
+                    <h3>Identity Operators</h3>
+                    <pre><code>x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
+y = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
+z = x
+
+<span class="keyword">print</span>(x <span class="keyword">is</span> z)      <span class="comment"># True  - Same object</span>
+<span class="keyword">print</span>(x <span class="keyword">is</span> y)      <span class="comment"># False - Different objects</span>
+<span class="keyword">print</span>(x == y)       <span class="comment"># True  - Same values</span>
+<span class="keyword">print</span>(x <span class="keyword">is not</span> y)  <span class="comment"># True</span></code></pre>
+
+                    <h3>Bitwise Operators</h3>
+                    <pre><code>a = <span class="number">60</span>  <span class="comment"># 0011 1100</span>
+b = <span class="number">13</span>  <span class="comment"># 0000 1101</span>
+
+<span class="keyword">print</span>(a & b)   <span class="comment"># 12 - AND</span>
+<span class="keyword">print</span>(a | b)   <span class="comment"># 61 - OR</span>
+<span class="keyword">print</span>(a ^ b)   <span class="comment"># 49 - XOR</span>
+<span class="keyword">print</span>(~a)      <span class="comment"># -61 - NOT</span>
+<span class="keyword">print</span>(a << <span class="number">2</span>)  <span class="comment"># 240 - Left shift</span>
+<span class="keyword">print</span>(a >> <span class="number">2</span>)  <span class="comment"># 15 - Right shift</span></code></pre>
+
+                    <h3>Operator Precedence</h3>
+                    <p>From highest to lowest:</p>
+                    <ol>
+                        <li>Parentheses: <code>()</code></li>
+                        <li>Exponentiation: <code>**</code></li>
+                        <li>Unary: <code>+x</code>, <code>-x</code>, <code>~x</code></li>
+                        <li>Multiplication/Division: <code>*</code>, <code>/</code>, <code>//</code>, <code>%</code>
+                        </li>
+                        <li>Addition/Subtraction: <code>+</code>, <code>-</code></li>
+                        <li>Bitwise shifts: <code>&lt;&lt;</code>, <code>&gt;&gt;</code></li>
+                        <li>Bitwise AND: <code>&</code></li>
+                        <li>Bitwise XOR: <code>^</code></li>
+                        <li>Bitwise OR: <code>|</code></li>
+                        <li>Comparison: <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>,
+                            <code>&lt;=</code>, <code>&gt;=</code>, <code>is</code>, <code>in</code>
+                        </li>
+                        <li>Logical NOT: <code>not</code></li>
+                        <li>Logical AND: <code>and</code></li>
+                        <li>Logical OR: <code>or</code></li>
+                    </ol>
+
+                    <pre><code>result = <span class="number">2</span> + <span class="number">3</span> * <span class="number">4</span>      <span class="comment"># 14 (not 20)</span>
+result = (<span class="number">2</span> + <span class="number">3</span>) * <span class="number">4</span>    <span class="comment"># 20</span>
+result = <span class="number">2</span> ** <span class="number">3</span> ** <span class="number">2</span>     <span class="comment"># 512 (right associative)</span></code></pre>
+                </section>
+
+                <section id="strings">
+                    <h2>Strings <a href="#strings" class="anchor">#</a></h2>
+                    <p>Strings are sequences of characters used for text.</p>
+
+                    <h3>Creating Strings</h3>
+                    <pre><code><span class="comment"># Single or double quotes</span>
+name = <span class="string">'Alice'</span>
+message = <span class="string">"Hello, World!"</span>
+
+<span class="comment"># Multi-line strings</span>
+text = <span class="string">"""This is
+a multi-line
+string"""</span>
+
+<span class="comment"># Escape characters</span>
+quote = <span class="string">"He said \"Hello\""</span>
+path = <span class="string">"C:\\Users\\Documents"</span>  <span class="comment"># Backslash</span>
+newline = <span class="string">"Line 1\nLine 2"</span>
+
+<span class="comment"># Raw strings (no escape processing)</span>
+regex = <span class="string">r"\d+\.\d+"</span></code></pre>
+
+                    <h3>String Operations</h3>
+                    <pre><code><span class="comment"># Concatenation</span>
+first = <span class="string">"Hello"</span>
+last = <span class="string">"World"</span>
+full = first + <span class="string">" "</span> + last  <span class="comment"># "Hello World"</span>
+
+<span class="comment"># Repetition</span>
+laugh = <span class="string">"Ha"</span> * <span class="number">3</span>  <span class="comment"># "HaHaHa"</span>
+
+<span class="comment"># Length</span>
+<span class="keyword">print</span>(<span class="function">len</span>(<span class="string">"Python"</span>))  <span class="comment"># 6</span></code></pre>
+
+                    <h3>String Indexing and Slicing</h3>
+                    <pre><code>text = <span class="string">"Python"</span>
+
+<span class="comment"># Indexing (0-based)</span>
+<span class="keyword">print</span>(text[<span class="number">0</span>])   <span class="comment"># 'P'</span>
+<span class="keyword">print</span>(text[<span class="number">-1</span>])  <span class="comment"># 'n' (last character)</span>
+
+<span class="comment"># Slicing [start:end:step]</span>
+<span class="keyword">print</span>(text[<span class="number">0</span>:<span class="number">3</span>])   <span class="comment"># 'Pyt'</span>
+<span class="keyword">print</span>(text[<span class="number">2</span>:])     <span class="comment"># 'thon'</span>
+<span class="keyword">print</span>(text[:<span class="number">4</span>])     <span class="comment"># 'Pyth'</span>
+<span class="keyword">print</span>(text[::<span class="number">2</span>])    <span class="comment"># 'Pto' (every 2nd char)</span>
+<span class="keyword">print</span>(text[::<span class="number">-1</span>])   <span class="comment"># 'nohtyP' (reverse)</span></code></pre>
+
+                    <h3>String Methods</h3>
+                    <pre><code>text = <span class="string">"  Hello, World!  "</span>
+
+<span class="comment"># Case conversion</span>
+<span class="keyword">print</span>(text.upper())       <span class="comment"># "  HELLO, WORLD!  "</span>
+<span class="keyword">print</span>(text.lower())       <span class="comment"># "  hello, world!  "</span>
+<span class="keyword">print</span>(text.title())       <span class="comment"># "  Hello, World!  "</span>
+<span class="keyword">print</span>(text.capitalize())  <span class="comment"># "  hello, world!  "</span>
+<span class="keyword">print</span>(text.swapcase())    <span class="comment"># "  hELLO, wORLD!  "</span>
+
+<span class="comment"># Whitespace handling</span>
+<span class="keyword">print</span>(text.strip())   <span class="comment"># "Hello, World!"</span>
+<span class="keyword">print</span>(text.lstrip())  <span class="comment"># "Hello, World!  "</span>
+<span class="keyword">print</span>(text.rstrip())  <span class="comment"># "  Hello, World!"</span>
+
+<span class="comment"># Search and replace</span>
+<span class="keyword">print</span>(text.find(<span class="string">"World"</span>))     <span class="comment"># 9</span>
+<span class="keyword">print</span>(text.replace(<span class="string">"World"</span>, <span class="string">"Python"</span>))  <span class="comment"># "  Hello, Python!  "</span>
+<span class="keyword">print</span>(text.count(<span class="string">"l"</span>))       <span class="comment"># 3</span>
+
+<span class="comment"># Split and join</span>
+words = text.strip().split(<span class="string">", "</span>)  <span class="comment"># ['Hello', 'World!']</span>
+joined = <span class="string">"-"</span>.join(words)          <span class="comment"># "Hello-World!"</span>
+
+<span class="comment"># Checking</span>
+<span class="keyword">print</span>(<span class="string">"hello"</span>.isalpha())   <span class="comment"># True</span>
+<span class="keyword">print</span>(<span class="string">"123"</span>.isdigit())     <span class="comment"># True</span>
+<span class="keyword">print</span>(<span class="string">"abc123"</span>.isalnum())  <span class="comment"># True</span>
+<span class="keyword">print</span>(<span class="string">"   "</span>.isspace())     <span class="comment"># True</span>
+<span class="keyword">print</span>(<span class="string">"Hello"</span>.startswith(<span class="string">"He"</span>))  <span class="comment"># True</span>
+<span class="keyword">print</span>(<span class="string">"Hello"</span>.endswith(<span class="string">"lo"</span>))    <span class="comment"># True</span></code></pre>
+
+                    <h3>String Formatting</h3>
+                    <pre><code>name = <span class="string">"Alice"</span>
+age = <span class="number">25</span>
+price = <span class="number">19.99</span>
+
+<span class="comment"># f-strings (Python 3.6+, preferred)</span>
+msg = <span class="string">f"My name is {name} and I'm {age} years old"</span>
+<span class="keyword">print</span>(msg)
+
+<span class="comment"># Expressions in f-strings</span>
+<span class="keyword">print</span>(<span class="string">f"Next year I'll be {age + 1}"</span>)
+<span class="keyword">print</span>(<span class="string">f"Price with tax: ${price * 1.08:.2f}"</span>)
+
+<span class="comment"># Format method</span>
+msg = <span class="string">"My name is {} and I'm {} years old"</span>.format(name, age)
+msg = <span class="string">"My name is {n} and I'm {a} years old"</span>.format(n=name, a=age)
+
+<span class="comment"># Old style (avoid)</span>
+msg = <span class="string">"My name is %s and I'm %d years old"</span> % (name, age)</code></pre>
+
+                    <h3>Format Specifiers</h3>
+                    <pre><code>num = <span class="number">42</span>
+pi = <span class="number">3.14159</span>
+
+<span class="keyword">print</span>(<span class="string">f"{num:5}"</span>)      <span class="comment"># "   42" (width 5)</span>
+<span class="keyword">print</span>(<span class="string">f"{num:05}"</span>)     <span class="comment"># "00042" (zero-padded)</span>
+<span class="keyword">print</span>(<span class="string">f"{pi:.2f}"</span>)     <span class="comment"># "3.14" (2 decimals)</span>
+<span class="keyword">print</span>(<span class="string">f"{num:b}"</span>)      <span class="comment"># "101010" (binary)</span>
+<span class="keyword">print</span>(<span class="string">f"{num:x}"</span>)      <span class="comment"># "2a" (hexadecimal)</span>
+<span class="keyword">print</span>(<span class="string">f"{1000:,}"</span>)     <span class="comment"># "1,000" (thousands sep)</span></code></pre>
+                </section>
+
+                <!-- Continue with more sections... Due to length, I'll create this as a complete file -->
+
+
+                <!-- Missing Sections generated automatically -->
+
+                <section id="numbers">
+                    <h2>Numbers <a href="#numbers" class="anchor">#</a></h2>
+                    <p>Python supports three types of numbers:</p>
+                    <ul>
+                        <li><strong>int:</strong> Whole numbers (e.g., 10, -5, 1000)</li>
+                        <li><strong>float:</strong> Decimal numbers (e.g., 3.14, -0.01)</li>
+                        <li><strong>complex:</strong> Numbers with a real and imaginary part (e.g., 2+3j)</li>
+                    </ul>
+
+                    <h3>Arithmetic Operations</h3>
+                    <pre><code>x = 10
+y = 3
+
+print(x + y)  # 13 (Addition)
+print(x - y)  # 7 (Subtraction)
+print(x * y)  # 30 (Multiplication)
+print(x / y)  # 3.333... (Division)
+print(x // y) # 3 (Floor Division)
+print(x % y)  # 1 (Modulus/Remainder)
+print(x ** y) # 1000 (Exponentiation)</code></pre>
+
+                    <div class="info-box">
+                        <p><strong>Note:</strong> Python integers have unlimited precision, meaning they can be as large
+                            as your computer's memory allows.</p>
+                    </div>
+                </section>
+
+                <section id="booleans">
+                    <h2>Booleans <a href="#booleans" class="anchor">#</a></h2>
+                    <p>Booleans represent one of two values: <code>True</code> or <code>False</code>. They are commonly
+                        used in conditional statements.</p>
+
+                    <h3>Comparison Operations</h3>
+                    <pre><code>print(10 > 9)   # True
+print(10 == 9)  # False
+print(10 < 9)   # False</code></pre>
+
+                    <h3>Truthy and Falsy Values</h3>
+                    <p>In Python, the following are considered <strong>False</strong> when evaluated in a boolean
+                        context:</p>
+                    <ul>
+                        <li><code>None</code></li>
+                        <li><code>False</code></li>
+                        <li>Zero of any numeric type (<code>0</code>, <code>0.0</code>, <code>0j</code>)</li>
+                        <li>Empty sequences/collections (<code>''</code>, <code>()</code>, <code>[]</code>,
+                            <code>{}</code>, <code>set()</code>)</li>
+                    </ul>
+                    <p>Almost everything else is considered <strong>True</strong>.</p>
+                </section>
+
+                <section id="type-conversion">
+                    <h2>Type Conversion <a href="#type-conversion" class="anchor">#</a></h2>
+                    <p>You can convert between different data types using constructor functions.</p>
+
+                    <h3>Implicit Conversion</h3>
+                    <p>Python automatically converts lower precision types to higher precision types to avoid data loss.
+                    </p>
+                    <pre><code>x = 1    # int
+y = 2.5  # float
+z = x + y
+print(z)      # 3.5
+print(type(z)) # &lt;class 'float'&gt;</code></pre>
+
+                    <h3>Explicit Conversion (Casting)</h3>
+                    <pre><code># Int to Float
+a = float(1)    # 1.0
+
+# Float to Int
+b = int(2.8)    # 2 (truncates decimal part)
+
+# Number to String
+c = str(10)     # "10"
+
+# String to Number
+d = int("5")    # 5
+e = float("3.5") # 3.5</code></pre>
+                </section>
+
+                <section id="lists">
+                    <h2>Lists <a href="#lists" class="anchor">#</a></h2>
+                    <p>Lists are ordered, mutable collections of items. They allow duplicate elements.</p>
+
+                    <h3>Creating Lists</h3>
+                    <pre><code>fruits = ["apple", "banana", "cherry"]
+numbers = [1, 5, 7, 9, 3]
+mixed = [1, "hello", True, 3.14]</code></pre>
+
+                    <h3>Accessing Items</h3>
+                    <pre><code>print(fruits[0])      # "apple"
+print(fruits[-1])     # "cherry" (last item)
+print(fruits[1:3])    # ["banana", "cherry"] (slicing)</code></pre>
+
+                    <h3>Modifying Lists</h3>
+                    <pre><code>fruits[1] = "blueberry"    # Change item
+fruits.append("orange")    # Add to end
+fruits.insert(1, "kiwi")   # Add at index
+fruits.remove("apple")     # Remove item
+last = fruits.pop()        # Remove and return last item</code></pre>
+
+                    <h3>List Comprehension</h3>
+                    <p>A concise way to create lists based on existing lists.</p>
+                    <pre><code># Create list of squares
+squares = [x**2 for x in range(10)]
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre>
+                </section>
+
+                <section id="tuples">
+                    <h2>Tuples <a href="#tuples" class="anchor">#</a></h2>
+                    <p>Tuples are ordered collections like lists, but they are <strong>immutable</strong> (cannot be
+                        changed after creation).</p>
+
+                    <h3>Creating Tuples</h3>
+                    <pre><code>point = (10, 20)
+colors = ("red", "green", "blue")
+single = (1,)  # Note the comma</code></pre>
+
+                    <h3>Unpacking</h3>
+                    <pre><code>coordinates = (4, 5)
+x, y = coordinates
+print(x)  # 4
+print(y)  # 5</code></pre>
+
+                    <div class="info-box">
+                        <p><strong>Use Case:</strong> Use tuples for data that shouldn't change, like geographic
+                            coordinates or RGB color values.</p>
+                    </div>
+                </section>
+
+                <section id="sets">
+                    <h2>Sets <a href="#sets" class="anchor">#</a></h2>
+                    <p>Sets are unordered collections of <strong>unique</strong> items.</p>
+
+                    <h3>Creating and Modifying</h3>
+                    <pre><code>unique_nums = {1, 2, 3, 3, 4}
+print(unique_nums)  # {1, 2, 3, 4} (duplicates removed)
+
+unique_nums.add(5)
+unique_nums.remove(1)</code></pre>
+
+                    <h3>Set Operations</h3>
+                    <pre><code>a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a | b)  # Union: {1, 2, 3, 4, 5}
+print(a & b)  # Intersection: {3}
+print(a - b)  # Difference: {1, 2}</code></pre>
+                </section>
+
+                <section id="dictionaries">
+                    <h2>Dictionaries <a href="#dictionaries" class="anchor">#</a></h2>
+                    <p>Dictionaries store data in key-value pairs. Keys must be unique and immutable.</p>
+
+                    <h3>Creating Dictionaries</h3>
+                    <pre><code>student = {
+    "name": "John",
+    "age": 20,
+    "courses": ["Math", "CompSci"]
+}</code></pre>
+
+                    <h3>Accessing and Modifying</h3>
+                    <pre><code># Access
+print(student["name"])          # "John"
+print(student.get("grade", "N/A")) # "N/A" (safer)
+
+# Modify
+student["age"] = 21             # Update
+student["grade"] = "A"          # Add new
+del student["courses"]          # Remove</code></pre>
+
+                    <h3>Looping</h3>
+                    <pre><code>for key, value in student.items():
+    print(f"{key}: {value}")</code></pre>
+                </section>
+
+                <section id="if-else">
+                    <h2>If/Else Statements <a href="#if-else" class="anchor">#</a></h2>
+                    <p>Conditional statements allow you to execute code based on certain conditions.</p>
+
+                    <pre><code>age = 18
+
+if age >= 21:
+    print("Can buy alcohol")
+elif age >= 18:
+    print("Can vote")
+else:
+    print("Too young")</code></pre>
+
+                    <h3>One-line If (Ternary Operator)</h3>
+                    <pre><code>status = "Adult" if age >= 18 else "Minor"</code></pre>
+                </section>
+
+                <section id="for-loops">
+                    <h2>For Loops <a href="#for-loops" class="anchor">#</a></h2>
+                    <p>Used for iterating over a sequence (list, tuple, dictionary, set, or string).</p>
+
+                    <pre><code>fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    print(x)</code></pre>
+
+                    <h3>Range Function</h3>
+                    <pre><code>for i in range(5):
+    print(i)  # 0, 1, 2, 3, 4
+
+for i in range(2, 10, 2):
+    print(i)  # 2, 4, 6, 8 (step 2)</code></pre>
+
+                    <h3>Enumerate</h3>
+                    <pre><code>for index, value in enumerate(fruits):
+    print(f"{index}: {value}")</code></pre>
+                </section>
+
+                <section id="while-loops">
+                    <h2>While Loops <a href="#while-loops" class="anchor">#</a></h2>
+                    <p>Executes a set of statements as long as a condition is true.</p>
+
+                    <pre><code>i = 1
+while i < 6:
+    print(i)
+    i += 1</code></pre>
+                </section>
+
+                <section id="break-continue">
+                    <h2>Break & Continue <a href="#break-continue" class="anchor">#</a></h2>
+
+                    <h3>Break</h3>
+                    <p>Stops the loop completely.</p>
+                    <pre><code>for i in range(10):
+    if i == 5:
+        break
+    print(i)  # Prints 0 to 4</code></pre>
+
+                    <h3>Continue</h3>
+                    <p>Skips the current iteration and continues with the next.</p>
+                    <pre><code>for i in range(5):
+    if i == 2:
+        continue
+    print(i)  # Prints 0, 1, 3, 4</code></pre>
+                </section>
+
+                <section id="functions">
+                    <h2>Functions Basics <a href="#functions" class="anchor">#</a></h2>
+                    <p>A function is a block of code which only runs when it is called.</p>
+
+                    <pre><code>def greet(name):
+    print(f"Hello, {name}!")
+
+greet("Alice")</code></pre>
+
+                    <h3>Docstrings</h3>
+                    <pre><code>def add(a, b):
+    """Returns the sum of two numbers."""
+    return a + b</code></pre>
+                </section>
+
+                <section id="parameters">
+                    <h2>Parameters & Arguments <a href="#parameters" class="anchor">#</a></h2>
+
+                    <h3>Default Arguments</h3>
+                    <pre><code>def power(base, exponent=2):
+    return base ** exponent
+
+print(power(3))    # 9 (uses default)
+print(power(3, 3)) # 27</code></pre>
+
+                    <h3>Arbitrary Arguments (*args)</h3>
+                    <pre><code>def sum_all(*numbers):
+    total = 0
+    for n in numbers:
+        total += n
+    return total
+
+print(sum_all(1, 2, 3, 4))  # 10</code></pre>
+
+                    <h3>Keyword Arguments (**kwargs)</h3>
+                    <pre><code>def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+print_info(name="John", age=30)</code></pre>
+                </section>
+
+                <section id="return-values">
+                    <h2>Return Values <a href="#return-values" class="anchor">#</a></h2>
+
+                    <h3>Single Value</h3>
+                    <pre><code>def square(x):
+    return x * x</code></pre>
+
+                    <h3>Multiple Values (Tuple)</h3>
+                    <pre><code>def get_dimensions():
+    return 1920, 1080
+
+width, height = get_dimensions()</code></pre>
+                </section>
+
+                <section id="lambda">
+                    <h2>Lambda Functions <a href="#lambda" class="anchor">#</a></h2>
+                    <p>Small anonymous functions defined with the <code>lambda</code> keyword.</p>
+
+                    <pre><code># Syntax: lambda arguments : expression
+double = lambda x: x * 2
+
+print(double(5))  # 10</code></pre>
+
+                    <h3>Use with map() and filter()</h3>
+                    <pre><code>nums = [1, 2, 3, 4, 5]
+
+squares = list(map(lambda x: x**2, nums))
+# [1, 4, 9, 16, 25]
+
+evens = list(filter(lambda x: x % 2 == 0, nums))
+# [2, 4]</code></pre>
+                </section>
+
+                <section id="decorators">
+                    <h2>Decorators <a href="#decorators" class="anchor">#</a></h2>
+                    <p>Decorators allow you to modify the behavior of a function or class.</p>
+
+                    <pre><code>def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()</code></pre>
+                </section>
+
+                <section id="generators">
+                    <h2>Generators <a href="#generators" class="anchor">#</a></h2>
+                    <p>Generators are functions that return an iterator using <code>yield</code>. They are memory
+                        efficient.</p>
+
+                    <pre><code>def count_up_to(n):
+    count = 1
+    while count <= n:
+        yield count
+        count += 1
+
+counter = count_up_to(5)
+for num in counter:
+    print(num)</code></pre>
+
+                    <h3>Generator Expression</h3>
+                    <pre><code>squares = (x*x for x in range(10))
+# Similar to list comprehension but returns generator object</code></pre>
+                </section>
+
+                <section id="classes">
+                    <h2>Classes & Objects <a href="#classes" class="anchor">#</a></h2>
+                    <p>Classes are blueprints for creating objects.</p>
+
+                    <pre><code>class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+
+    def bark(self):
+        return f"{self.name} says Woof!"
+
+my_dog = Dog("Buddy", "Golden Retriever")
+print(my_dog.bark())</code></pre>
+                </section>
+
+                <section id="inheritance">
+                    <h2>Inheritance <a href="#inheritance" class="anchor">#</a></h2>
+                    <p>Allows a class to inherit attributes and methods from another class.</p>
+
+                    <pre><code>class Animal:
+    def speak(self):
+        print("Generic animal sound")
+
+class Cat(Animal):
+    def speak(self):
+        print("Meow")
+
+cat = Cat()
+cat.speak()  # Meow</code></pre>
+                </section>
+
+                <section id="polymorphism">
+                    <h2>Polymorphism <a href="#polymorphism" class="anchor">#</a></h2>
+                    <p>The ability to use a common interface for multiple forms (data types).</p>
+
+                    <pre><code>animals = [Dog("Buddy", "Pug"), Cat()]
+
+for animal in animals:
+    print(animal.speak())  # Different output for each</code></pre>
+                </section>
+
+                <section id="encapsulation">
+                    <h2>Encapsulation <a href="#encapsulation" class="anchor">#</a></h2>
+                    <p>Restricting access to methods and variables. In Python, use underscores.</p>
+
+                    <pre><code>class Account:
+    def __init__(self):
+        self._protected = 10  # Suggests internal use
+        self.__private = 20   # Mangled name (harder to access)
+
+    def get_private(self):
+        return self.__private</code></pre>
+                </section>
+
+                <section id="magic-methods">
+                    <h2>Magic Methods <a href="#magic-methods" class="anchor">#</a></h2>
+                    <p>Special methods with double underscores (dunder methods).</p>
+
+                    <pre><code>class Book:
+    def __init__(self, title, pages):
+        self.title = title
+        self.pages = pages
+
+    def __str__(self):
+        return f"{self.title} ({self.pages} pages)"
+
+    def __len__(self):
+        return self.pages
+
+b = Book("Python 101", 200)
+print(b)        # Python 101 (200 pages)
+print(len(b))   # 200</code></pre>
+                </section>
+
+                <section id="file-handling">
+                    <h2>File Handling <a href="#file-handling" class="anchor">#</a></h2>
+                    <p>Reading and writing files is simple in Python.</p>
+
+                    <h3>Reading Files</h3>
+                    <pre><code>with open("example.txt", "r") as f:
+        content = f.read()
+        print(content)</code></pre>
+
+                    <h3>Writing Files</h3>
+                    <pre><code>with open("example.txt", "w") as f:
+        f.write("Hello, World!")</code></pre>
+
+                    <div class="info-box">
+                        <p><strong>Note:</strong> Using the <code>with</code> statement automatically closes the file,
+                            even if an error occurs.</p>
+                    </div>
+                </section>
+
+                <section id="exception-handling">
+                    <h2>Exception Handling <a href="#exception-handling" class="anchor">#</a></h2>
+                    <p>Handle runtime errors gracefully using try-except blocks.</p>
+
+                    <pre><code>try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+except Exception as e:
+    print(f"An error occurred: {e}")
+finally:
+    print("This always runs")</code></pre>
+                </section>
+
+                <section id="modules">
+                    <h2>Modules & Packages <a href="#modules" class="anchor">#</a></h2>
+                    <p>Organize code into reusable files and folders.</p>
+
+                    <h3>Importing</h3>
+                    <pre><code>import math
+from math import sqrt
+from my_package import my_module</code></pre>
+
+                    <h3>Creating a Module</h3>
+                    <p>Save code in a file ending in <code>.py</code>.</p>
+                </section>
+
+                <section id="virtual-env">
+                    <h2>Virtual Environments <a href="#virtual-env" class="anchor">#</a></h2>
+                    <p>Isolate dependencies for different projects.</p>
+
+                    <pre><code class="language-bash"># Create
+python3 -m venv venv
+
+# Activate (Mac/Linux)
+source venv/bin/activate
+
+# Activate (Windows)
+venv\Scripts\activate</code></pre>
+                </section>
+
+                <section id="pip">
+                    <h2>Package Management (pip) <a href="#pip" class="anchor">#</a></h2>
+                    <p>Standard package manager for Python.</p>
+
+                    <pre><code class="language-bash">pip install requests
+pip freeze > requirements.txt
+pip install -r requirements.txt</code></pre>
+                </section>
+
+                <section id="async">
+                    <h2>Async Programming <a href="#async" class="anchor">#</a></h2>
+                    <p>Write concurrent code using the <code>async</code> and <code>await</code> syntax.</p>
+
+                    <pre><code>import asyncio
+
+async def main():
+    print("Hello")
+    await asyncio.sleep(1)
+    print("World")
+
+asyncio.run(main())</code></pre>
+                </section>
+
+                <section id="threading">
+                    <h2>Threading & Multiprocessing <a href="#threading" class="anchor">#</a></h2>
+
+                    <h3>Threading</h3>
+                    <p>Best for I/O-bound tasks.</p>
+                    <pre><code>import threading
+
+def worker():
+    print("Working...")
+
+t = threading.Thread(target=worker)
+t.start()</code></pre>
+
+                    <h3>Multiprocessing</h3>
+                    <p>Best for CPU-bound tasks (bypasses GIL).</p>
+                </section>
+
+                <section id="os-module">
+                    <h2>OS Module <a href="#os-module" class="anchor">#</a></h2>
+                    <p>Interact with the operating system (files, directories, environment).</p>
+
+                    <pre><code>import os
+
+# Get current directory
+print(os.getcwd())
+
+# List files
+print(os.listdir())
+
+# Create directory
+os.mkdir("new_folder")
+
+# Environment variables
+user = os.getenv("USER")</code></pre>
+                </section>
+
+                <section id="datetime">
+                    <h2>Datetime <a href="#datetime" class="anchor">#</a></h2>
+                    <p>Work with dates and times.</p>
+
+                    <pre><code>from datetime import datetime, timedelta
+
+now = datetime.now()
+print(now)
+
+# Formatting
+print(now.strftime("%Y-%m-%d %H:%M:%S"))
+
+# Date math
+tomorrow = now + timedelta(days=1)</code></pre>
+                </section>
+
+                <section id="json">
+                    <h2>JSON <a href="#json" class="anchor">#</a></h2>
+                    <p>Parse and generate JSON data.</p>
+
+                    <pre><code>import json
+
+# Python to JSON string
+data = {"name": "Alice", "age": 25}
+json_str = json.dumps(data)
+print(json_str)
+
+# JSON string to Python
+parsed = json.loads(json_str)
+print(parsed["name"])</code></pre>
+                </section>
+
+                <section id="regex">
+                    <h2>Regular Expressions <a href="#regex" class="anchor">#</a></h2>
+                    <p>Pattern matching using the <code>re</code> module.</p>
+
+                    <pre><code>import re
+
+text = "My email is test@example.com"
+match = re.search(r"[\w\.-]+@[\w\.-]+", text)
+
+if match:
+    print(match.group())  # test@example.com</code></pre>
+                </section>
+
+                <section id="pathlib">
+                    <h2>Pathlib <a href="#pathlib" class="anchor">#</a></h2>
+                    <p>Object-oriented filesystem paths (Python 3.4+).</p>
+
+                    <pre><code>from pathlib import Path
+
+# Current path
+path = Path(".")
+
+# List .py files
+for file in path.glob("*.py"):
+    print(file)
+
+# Read text
+text = (path / "example.txt").read_text()</code></pre>
+                </section>
+
+                <section id="collections">
+                    <h2>Collections <a href="#collections" class="anchor">#</a></h2>
+                    <p>Specialized container datatypes.</p>
+
+                    <pre><code>from collections import Counter, defaultdict
+
+# Counter
+c = Counter("banana")
+print(c)  # Counter({'a': 3, 'n': 2, 'b': 1})
+
+# Defaultdict
+d = defaultdict(int)
+d["key"] += 1  # No error if key missing</code></pre>
+                </section>
+
+                <section id="itertools">
+                    <h2>Itertools <a href="#itertools" class="anchor">#</a></h2>
+                    <p>Functions for efficient looping.</p>
+
+                    <pre><code>import itertools
+
+# Infinite count
+for i in itertools.count(10):
+    if i > 15: break
+    print(i)
+
+# Permutations
+print(list(itertools.permutations([1, 2], 2)))
+# [(1, 2), (2, 1)]</code></pre>
+                </section>
+
+                <section id="requests">
+                    <h2>HTTP Requests <a href="#requests" class="anchor">#</a></h2>
+                    <p>The standard library for making HTTP requests.</p>
+
+                    <pre><code>import requests
+
+response = requests.get("https://api.github.com")
+print(response.status_code)
+print(response.json())</code></pre>
+                </section>
+
+                <section id="flask-intro">
+                    <h2>Flask Basics <a href="#flask-intro" class="anchor">#</a></h2>
+                    <p>A lightweight web framework.</p>
+
+                    <pre><code>from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello, Flask!"
+
+if __name__ == "__main__":
+    app.run(debug=True)</code></pre>
+                </section>
+
+                <section id="fastapi-intro">
+                    <h2>FastAPI Basics <a href="#fastapi-intro" class="anchor">#</a></h2>
+                    <p>Modern, fast web framework for building APIs.</p>
+
+                    <pre><code>from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}</code></pre>
+                </section>
+
+                <section id="web-scraping">
+                    <h2>Web Scraping <a href="#web-scraping" class="anchor">#</a></h2>
+                    <p>Extracting data from websites.</p>
+
+                    <pre><code>from bs4 import BeautifulSoup
+import requests
+
+html = requests.get("https://example.com").text
+soup = BeautifulSoup(html, "html.parser")
+
+print(soup.title.text)</code></pre>
+                </section>
+
+                <section id="discord-permissions">
+                    <h2>Permissions & Roles <a href="#discord-permissions" class="anchor">#</a></h2>
+                    <p>Manage server roles and user permissions in discord.py.</p>
+
+                    <pre><code>@bot.command()
+@commands.has_permissions(manage_messages=True)
+async def clear(ctx, amount=5):
+    await ctx.channel.purge(limit=amount)
+
+@bot.command()
+async def add_role(ctx, user: discord.Member, role: discord.Role):
+    await user.add_roles(role)
+    await ctx.send(f"Added {role.name} to {user.display_name}")</code></pre>
+
+                    <div class="info-box">
+                        <p><strong>Note:</strong> Always ensure the bot's role is positioned higher than the roles it is
+                            trying to manage.</p>
+                    </div>
+                </section>
+
+                <section id="discord-voice">
+                    <h2>Voice Channels & Audio <a href="#discord-voice" class="anchor">#</a></h2>
+                    <p>Connect to voice channels and play audio.</p>
+
+                    <pre><code>@bot.command()
+async def join(ctx):
+    if ctx.author.voice:
+        channel = ctx.author.voice.channel
+        await channel.connect()
+    else:
+        await ctx.send("You are not in a voice channel!")
+
+@bot.command()
+async def leave(ctx):
+    if ctx.voice_client:
+        await ctx.voice_client.disconnect()</code></pre>
+
+                    <h3>Playing Audio (FFmpeg)</h3>
+                    <pre><code>voice_client.play(discord.FFmpegPCMAudio('song.mp3'))</code></pre>
+                </section>
+
+                <section id="numpy">
+                    <h2>NumPy Basics <a href="#numpy" class="anchor">#</a></h2>
+                    <p>NumPy is the fundamental package for scientific computing with Python.</p>
+
+                    <pre><code>import numpy as np
+
+# Create array
+arr = np.array([1, 2, 3, 4, 5])
+print(arr)
+
+# Element-wise operations
+print(arr * 2)  # [2, 4, 6, 8, 10]
+
+# Shape and dimensions
+arr_2d = np.array([[1, 2], [3, 4]])
+print(arr_2d.shape)  # (2, 2)</code></pre>
+                </section>
+
+                <section id="pandas">
+                    <h2>Pandas Basics <a href="#pandas" class="anchor">#</a></h2>
+                    <p>Data manipulation and analysis library.</p>
+
+                    <pre><code>import pandas as pd
+
+# Create DataFrame
+data = {
+    'Name': ['Alice', 'Bob'],
+    'Age': [25, 30]
+}
+df = pd.DataFrame(data)
+print(df)
+
+# Selection
+print(df['Name'])
+
+# Basic Stats
+print(df.describe())</code></pre>
+                </section>
+
+                <section id="matplotlib">
+                    <h2>Data Visualization <a href="#matplotlib" class="anchor">#</a></h2>
+                    <p>Matplotlib is a comprehensive library for creating static, animated, and interactive
+                        visualizations.</p>
+
+                    <pre><code>import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+plt.plot(x, y)
+plt.title("Sine Wave")
+plt.show()</code></pre>
+                </section>
+
+                <section id="pep8">
+                    <h2>PEP 8 Style Guide <a href="#pep8" class="anchor">#</a></h2>
+                    <p>PEP 8 is the official style guide for Python code.</p>
+                    <ul>
+                        <li><strong>Indentation:</strong> Use 4 spaces per indentation level.</li>
+                        <li><strong>Line Length:</strong> Limit all lines to a maximum of 79 characters.</li>
+                        <li><strong>Naming:</strong> <code>snake_case</code> for functions/variables,
+                            <code>PascalCase</code> for classes.</li>
+                        <li><strong>Imports:</strong> Should be on separate lines and grouped (Standard library,
+                            Third-party, Local).</li>
+                    </ul>
+                </section>
+
+                <section id="testing">
+                    <h2>Unit Testing <a href="#testing" class="anchor">#</a></h2>
+                    <p>Testing your code ensures it works as expected.</p>
+
+                    <h3>Using unittest</h3>
+                    <pre><code>import unittest
+
+def add(a, b):
+    return a + b
+
+class TestMath(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add(1, 2), 3)
+
+if __name__ == '__main__':
+    unittest.main()</code></pre>
+                </section>
+
+                <section id="debugging">
+                    <h2>Debugging <a href="#debugging" class="anchor">#</a></h2>
+                    <p>Find and fix bugs in your code.</p>
+
+                    <h3>Using pdb</h3>
+                    <pre><code>import pdb
+
+x = 10
+pdb.set_trace()  # Execution stops here
+y = 20
+print(x + y)</code></pre>
+
+                    <div class="info-box">
+                        <p><strong>Tip:</strong> Use the <code>logging</code> module instead of <code>print()</code> for
+                            production debugging.</p>
+                    </div>
+                </section>
+
+                <section id="performance">
+                    <h2>Performance Optimization <a href="#performance" class="anchor">#</a></h2>
+                    <p>Write efficient Python code.</p>
+
+                    <ul>
+                        <li><strong>Use built-ins:</strong> Functions like <code>sum()</code> are written in C and are
+                            very fast.</li>
+                        <li><strong>List Comprehensions:</strong> Faster than <code>for</code> loops for creating lists.
+                        </li>
+                        <li><strong>Profiling:</strong> Use <code>cProfile</code> to find bottlenecks.</li>
+                    </ul>
+
+                    <pre><code>import cProfile
+cProfile.run('my_function()')</code></pre>
+                </section>
+
+                <section id="security">
+                    <h2>Security Best Practices <a href="#security" class="anchor">#</a></h2>
+                    <p>Protect your application and users.</p>
+                    <ul>
+                        <li><strong>Environment Variables:</strong> Never hardcode API keys or secrets.</li>
+                        <li><strong>Input Validation:</strong> Always validate and sanitize user input.</li>
+                        <li><strong>SQL Injection:</strong> Use parameterized queries (never format strings for SQL).
+                        </li>
+                        <li><strong>Dependencies:</strong> Keep your packages updated
+                            (<code>pip list --outdated</code>).</li>
+                    </ul>
+                </section>
+
+                <section id="discord-intro">
+                    <h2>Discord Bot Development <a href="#discord-intro" class="anchor">#</a></h2>
+                    <p>Discord.py is a modern, feature-rich Python library for creating Discord bots. This section will
+                        teach you everything from basic bot creation to advanced patterns.</p>
+
+                    <h3>What is discord.py?</h3>
+                    <p>discord.py is an API wrapper for Discord written in Python. It provides:</p>
+                    <ul>
+                        <li>Object-oriented design with clean abstractions</li>
+                        <li>Full Discord API coverage</li>
+                        <li>Async/await support for efficient concurrent operations</li>
+                        <li>Command framework for building bot commands easily</li>
+                        <li>Extensive documentation and active community</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <p><strong>Official Documentation:</strong> <a href="https://discordpy.readthedocs.io/"
+                                target="_blank">https://discordpy.readthedocs.io/</a></p>
+                    </div>
+
+                    <h3>Prerequisites</h3>
+                    <ul>
+                        <li>Python 3.8 or higher</li>
+                        <li>Basic understanding of async/await in Python</li>
+                        <li>Discord account</li>
+                        <li>Basic knowledge of Discord server structure</li>
+                    </ul>
+
+                    <h3>Installation</h3>
+                    <pre><code><span class="comment"># Install discord.py</span>
+pip install discord.py
+
+<span class="comment"># With voice support</span>
+pip install discord.py[voice]
+
+<span class="comment"># Verify installation</span>
+python -c <span class="string">"import discord; print(discord.__version__)"</span></code></pre>
+                </section>
+
+                <section id="discord-setup">
+                    <h2>Bot Setup & Authentication <a href="#discord-setup" class="anchor">#</a></h2>
+
+                    <h3>Creating a Bot Application</h3>
+                    <ol>
+                        <li>Go to <a href="https://discord.com/developers/applications" target="_blank">Discord
+                                Developer Portal</a></li>
+                        <li>Click "New Application"</li>
+                        <li>Give your application a name</li>
+                        <li>Go to the "Bot" tab</li>
+                        <li>Click "Add Bot"</li>
+                        <li>Copy the bot token (keep it secret!)</li>
+                    </ol>
+
+                    <h3>Bot Permissions</h3>
+                    <p>Under OAuth2 → URL Generator:</p>
+                    <ul>
+                        <li>Select scope: <code>bot</code> and <code>applications.commands</code></li>
+                        <li>Select required permissions</li>
+                        <li>Copy the generated URL to invite your bot</li>
+                    </ul>
+
+                    <h3>Storing Bot Token Securely</h3>
+                    <pre><code><span class="comment"># Create a .env file (don't commit this!)</span>
+<span class="comment"># .env</span>
+DISCORD_TOKEN=your_bot_token_here
+
+<span class="comment"># Install python-dotenv</span>
+pip install python-dotenv
+
+<span class="comment"># Load token in your bot</span>
+<span class="keyword">import</span> os
+<span class="keyword">from</span> dotenv <span class="keyword">import</span> load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv(<span class="string">'DISCORD_TOKEN'</span>)</code></pre>
+
+                    <div class="warning-box">
+                        <p><strong>Security Warning:</strong> Never hardcode your token or commit it to version control.
+                            Add .env to your .gitignore file.</p>
+                    </div>
+                </section>
+
+                <section id="discord-basic-bot">
+                    <h2>Creating Your First Bot <a href="#discord-basic-bot" class="anchor">#</a></h2>
+
+                    <h3>Minimal Bot Example</h3>
+                    <pre><code><span class="keyword">import</span> discord
+<span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands
+<span class="keyword">import</span> os
+<span class="keyword">from</span> dotenv <span class="keyword">import</span> load_dotenv
+
+<span class="comment"># Load environment variables</span>
+load_dotenv()
+TOKEN = os.getenv(<span class="string">'DISCORD_TOKEN'</span>)
+
+<span class="comment"># Create bot instance</span>
+bot = commands.Bot(command_prefix=<span class="string">'!'</span>, intents=discord.Intents.default())
+
+<span class="comment"># Event: Bot is ready</span>
+<span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_ready</span>():
+    <span class="keyword">print</span>(<span class="string">f'{bot.user} has connected to Discord!'</span>)
+
+<span class="comment"># Command: Simple ping</span>
+<span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">ping</span>(ctx):
+    <span class="keyword">await</span> ctx.send(<span class="string">'Pong!'</span>)
+
+<span class="comment"># Run the bot</span>
+bot.run(TOKEN)</code></pre>
+
+                    <h3>Understanding Intents</h3>
+                    <p>Intents specify which events your bot will receive. They're required for privacy and performance.
+                    </p>
+                    <pre><code><span class="keyword">import</span> discord
+
+<span class="comment"># Default intents (most common)</span>
+intents = discord.Intents.default()
+
+<span class="comment"># Enable specific intents</span>
+intents.members = <span class="keyword">True</span>  <span class="comment"># Member events (requires privileged intent)</span>
+intents.message_content = <span class="keyword">True</span>  <span class="comment"># Message content (required for commands)</span>
+
+<span class="comment"># All intents (not recommended for production)</span>
+intents = discord.Intents.all()
+
+bot = commands.Bot(command_prefix=<span class="string">'!'</span>, intents=intents)</code></pre>
+
+                    <div class="info-box">
+                        <p><strong>Privileged Intents:</strong> Some intents (members, presence, message content)
+                            require enabling in the Discord Developer Portal under Bot → Privileged Gateway Intents.</p>
+                    </div>
+
+                    <h3>Bot Events</h3>
+                    <pre><code><span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_ready</span>():
+    <span class="keyword">print</span>(<span class="string">f'Logged in as {bot.user.name}'</span>)
+    <span class="keyword">print</span>(<span class="string">f'Bot ID: {bot.user.id}'</span>)
+
+<span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_message</span>(message):
+    <span class="comment"># Ignore messages from the bot itself</span>
+    <span class="keyword">if</span> message.author == bot.user:
+        <span class="keyword">return</span>
+    
+    <span class="comment"># Log all messages</span>
+    <span class="keyword">print</span>(<span class="string">f'{message.author}: {message.content}'</span>)
+    
+    <span class="comment"># Important: Process commands</span>
+    <span class="keyword">await</span> bot.process_commands(message)
+
+<span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_member_join</span>(member):
+    channel = member.guild.system_channel
+    <span class="keyword">if</span> channel:
+        <span class="keyword">await</span> channel.send(<span class="string">f'Welcome {member.mention}!'</span>)
+
+<span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_member_remove</span>(member):
+    <span class="keyword">print</span>(<span class="string">f'{member} has left the server'</span>)
+
+<span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_error</span>(event, *args, **kwargs):
+    <span class="keyword">print</span>(<span class="string">f'Error in {event}'</span>)</code></pre>
+                </section>
+
+                <section id="discord-commands">
+                    <h2>Commands & Events <a href="#discord-commands" class="anchor">#</a></h2>
+
+                    <h3>Basic Commands</h3>
+                    <pre><code><span class="comment"># Simple command</span>
+<span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">hello</span>(ctx):
+    <span class="keyword">await</span> ctx.send(<span class="string">f'Hello, {ctx.author.name}!'</span>)
+
+<span class="comment"># Command with arguments</span>
+<span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">say</span>(ctx, *, message):
+    <span class="keyword">await</span> ctx.send(message)
+
+<span class="comment"># Multiple arguments</span>
+<span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">add</span>(ctx, a: <span class="function">int</span>, b: <span class="function">int</span>):
+    <span class="keyword">await</span> ctx.send(<span class="string">f'{a} + {b} = {a + b}'</span>)
+
+<span class="comment"># Optional arguments with defaults</span>
+<span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">greet</span>(ctx, name: <span class="function">str</span> = <span class="string">"Guest"</span>):
+    <span class="keyword">await</span> ctx.send(<span class="string">f'Hello, {name}!'</span>)</code></pre>
+
+                    <h3>Command Aliases</h3>
+                    <pre><code><span class="keyword">@bot.command</span>(aliases=[<span class="string">'p'</span>, <span class="string">'pong'</span>])
+<span class="keyword">async def</span> <span class="function">ping</span>(ctx):
+    <span class="keyword">await</span> ctx.send(<span class="string">'Pong!'</span>)
+
+<span class="comment"># Can be triggered with: !ping, !p, or !pong</span></code></pre>
+
+                    <h3>Command with Description and Help</h3>
+                    <pre><code><span class="keyword">@bot.command</span>(
+    name=<span class="string">'userinfo'</span>,
+    help=<span class="string">'Shows information about a user'</span>,
+    brief=<span class="string">'User information'</span>
+)
+<span class="keyword">async def</span> <span class="function">user_info</span>(ctx, member: discord.Member = <span class="keyword">None</span>):
+    member = member <span class="keyword">or</span> ctx.author
+    
+    embed = discord.Embed(
+        title=<span class="string">f"User Info - {member}"</span>,
+        color=discord.Color.blue()
+    )
+    embed.add_field(name=<span class="string">"ID"</span>, value=member.id)
+    embed.add_field(name=<span class="string">"Joined"</span>, value=member.joined_at.strftime(<span class="string">"%Y-%m-%d"</span>))
+    embed.set_thumbnail(url=member.avatar.url)
+    
+    <span class="keyword">await</span> ctx.send(embed=embed)</code></pre>
+
+                    <h3>Error Handling</h3>
+                    <pre><code><span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">divide</span>(ctx, a: <span class="function">int</span>, b: <span class="function">int</span>):
+    <span class="keyword">try</span>:
+        result = a / b
+        <span class="keyword">await</span> ctx.send(<span class="string">f'{a} / {b} = {result}'</span>)
+    <span class="keyword">except</span> <span class="function">ZeroDivisionError</span>:
+        <span class="keyword">await</span> ctx.send(<span class="string">'Cannot divide by zero!'</span>)
+
+<span class="comment"># Global error handler</span>
+<span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_command_error</span>(ctx, error):
+    <span class="keyword">if</span> <span class="function">isinstance</span>(error, commands.MissingRequiredArgument):
+        <span class="keyword">await</span> ctx.send(<span class="string">'Missing required argument!'</span>)
+    <span class="keyword">elif</span> <span class="function">isinstance</span>(error, commands.BadArgument):
+        <span class="keyword">await</span> ctx.send(<span class="string">'Bad argument provided!'</span>)
+    <span class="keyword">elif</span> <span class="function">isinstance</span>(error, commands.CommandNotFound):
+        <span class="keyword">await</span> ctx.send(<span class="string">'Command not found!'</span>)
+    <span class="keyword">else</span>:
+        <span class="keyword">print</span>(<span class="string">f'Unhandled error: {error}'</span>)</code></pre>
+
+                    <h3>Command Checks (Permissions)</h3>
+                    <pre><code><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands
+
+<span class="comment"># Require administrator permission</span>
+<span class="keyword">@bot.command</span>()
+<span class="keyword">@commands.has_permissions</span>(administrator=<span class="keyword">True</span>)
+<span class="keyword">async def</span> <span class="function">clear</span>(ctx, amount: <span class="function">int</span> = <span class="number">10</span>):
+    <span class="keyword">await</span> ctx.channel.purge(limit=amount + <span class="number">1</span>)
+    <span class="keyword">await</span> ctx.send(<span class="string">f'Cleared {amount} messages!'</span>, delete_after=<span class="number">3</span>)
+
+<span class="comment"># Require specific role</span>
+<span class="keyword">@bot.command</span>()
+<span class="keyword">@commands.has_role</span>(<span class="string">'Moderator'</span>)
+<span class="keyword">async def</span> <span class="function">kick</span>(ctx, member: discord.Member, *, reason=<span class="keyword">None</span>):
+    <span class="keyword">await</span> member.kick(reason=reason)
+    <span class="keyword">await</span> ctx.send(<span class="string">f'{member} has been kicked'</span>)
+
+<span class="comment"># Only bot owner can use</span>
+<span class="keyword">@bot.command</span>()
+<span class="keyword">@commands.is_owner</span>()
+<span class="keyword">async def</span> <span class="function">shutdown</span>(ctx):
+    <span class="keyword">await</span> ctx.send(<span class="string">'Shutting down...'</span>)
+    <span class="keyword">await</span> bot.close()
+
+<span class="comment"># Custom check</span>
+<span class="keyword">def</span> <span class="function">is_in_channel</span>(channel_id):
+    <span class="keyword">async def</span> <span class="function">predicate</span>(ctx):
+        <span class="keyword">return</span> ctx.channel.id == channel_id
+    <span class="keyword">return</span> commands.check(predicate)
+
+<span class="keyword">@bot.command</span>()
+<span class="keyword">@is_in_channel</span>(<span class="number">123456789</span>)
+<span class="keyword">async def</span> <span class="function">secret</span>(ctx):
+    <span class="keyword">await</span> ctx.send(<span class="string">'Secret command!'</span>)</code></pre>
+
+                    <h3>Cooldowns</h3>
+                    <pre><code><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands
+
+<span class="comment"># 1 use per 5 seconds per user</span>
+<span class="keyword">@bot.command</span>()
+<span class="keyword">@commands.cooldown</span>(<span class="number">1</span>, <span class="number">5</span>, commands.BucketType.user)
+<span class="keyword">async def</span> <span class="function">daily</span>(ctx):
+    <span class="keyword">await</span> ctx.send(<span class="string">'Here is your daily reward!'</span>)
+
+<span class="comment"># Handle cooldown errors</span>
+<span class="keyword">@daily.error</span>
+<span class="keyword">async def</span> <span class="function">daily_error</span>(ctx, error):
+    <span class="keyword">if</span> <span class="function">isinstance</span>(error, commands.CommandOnCooldown):
+        <span class="keyword">await</span> ctx.send(<span class="string">f'Cooldown! Try again in {error.retry_after:.0f}s'</span>)</code></pre>
+                </section>
+
+                <section id="discord-cogs">
+                    <h2>Cogs & Extensions <a href="#discord-cogs" class="anchor">#</a></h2>
+                    <p>Cogs are a way to organize commands and listeners into different files/modules.</p>
+
+                    <h3>Creating a Cog</h3>
+                    <pre><code><span class="comment"># cogs/moderation.py</span>
+<span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands
+<span class="keyword">import</span> discord
+
+<span class="keyword">class</span> <span class="function">Moderation</span>(commands.Cog):
+    <span class="string">"""Moderation commands"""</span>
+    
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, bot):
+        <span class="keyword">self</span>.bot = bot
+    
+    <span class="keyword">@commands.command</span>()
+    <span class="keyword">@commands.has_permissions</span>(kick_members=<span class="keyword">True</span>)
+    <span class="keyword">async def</span> <span class="function">kick</span>(<span class="keyword">self</span>, ctx, member: discord.Member, *, reason=<span class="keyword">None</span>):
+        <span class="keyword">await</span> member.kick(reason=reason)
+        <span class="keyword">await</span> ctx.send(<span class="string">f'{member} has been kicked. Reason: {reason}'</span>)
+    
+    <span class="keyword">@commands.command</span>()
+    <span class="keyword">@commands.has_permissions</span>(ban_members=<span class="keyword">True</span>)
+    <span class="keyword">async def</span> <span class="function">ban</span>(<span class="keyword">self</span>, ctx, member: discord.Member, *, reason=<span class="keyword">None</span>):
+        <span class="keyword">await</span> member.ban(reason=reason)
+        <span class="keyword">await</span> ctx.send(<span class="string">f'{member} has been banned. Reason: {reason}'</span>)
+    
+    <span class="keyword">@commands.Cog.listener</span>()
+    <span class="keyword">async def</span> <span class="function">on_member_join</span>(<span class="keyword">self</span>, member):
+        channel = member.guild.system_channel
+        <span class="keyword">if</span> channel:
+            <span class="keyword">await</span> channel.send(<span class="string">f'Welcome {member.mention}!'</span>)
+
+<span class="comment"># Required function for loading</span>
+<span class="keyword">async def</span> <span class="function">setup</span>(bot):
+    <span class="keyword">await</span> bot.add_cog(Moderation(bot))</code></pre>
+
+                    <h3>Loading Cogs</h3>
+                    <pre><code><span class="comment"># main.py</span>
+<span class="keyword">import</span> asyncio
+
+<span class="comment"># Load a single cog</span>
+<span class="keyword">async def</span> <span class="function">load_extensions</span>():
+    <span class="keyword">await</span> bot.load_extension(<span class="string">'cogs.moderation'</span>)
+
+<span class="comment"># Load all cogs from a directory</span>
+<span class="keyword">import</span> os
+
+<span class="keyword">async def</span> <span class="function">load_all_cogs</span>():
+    <span class="keyword">for</span> filename <span class="keyword">in</span> os.listdir(<span class="string">'./cogs'</span>):
+        <span class="keyword">if</span> filename.endswith(<span class="string">'.py'</span>):
+            <span class="keyword">await</span> bot.load_extension(<span class="string">f'cogs.{filename[:-3]}'</span>)
+
+<span class="comment"># Run before starting bot</span>
+<span class="keyword">async def</span> <span class="function">main</span>():
+    <span class="keyword">await</span> load_all_cogs()
+    <span class="keyword">await</span> bot.start(TOKEN)
+
+asyncio.run(main())</code></pre>
+
+                    <h3>Cog Management Commands</h3>
+                    <pre><code><span class="keyword">@bot.command</span>()
+<span class="keyword">@commands.is_owner</span>()
+<span class="keyword">async def</span> <span class="function">load</span>(ctx, extension):
+    <span class="keyword">await</span> bot.load_extension(<span class="string">f'cogs.{extension}'</span>)
+    <span class="keyword">await</span> ctx.send(<span class="string">f'Loaded {extension}'</span>)
+
+<span class="keyword">@bot.command</span>()
+<span class="keyword">@commands.is_owner</span>()
+<span class="keyword">async def</span> <span class="function">unload</span>(ctx, extension):
+    <span class="keyword">await</span> bot.unload_extension(<span class="string">f'cogs.{extension}'</span>)
+    <span class="keyword">await</span> ctx.send(<span class="string">f'Unloaded {extension}'</span>)
+
+<span class="keyword">@bot.command</span>()
+<span class="keyword">@commands.is_owner</span>()
+<span class="keyword">async def</span> <span class="function">reload</span>(ctx, extension):
+    <span class="keyword">await</span> bot.reload_extension(<span class="string">f'cogs.{extension}'</span>)
+    <span class="keyword">await</span> ctx.send(<span class="string">f'Reloaded {extension}'</span>)</code></pre>
+                </section>
+
+                <section id="discord-embeds">
+                    <h2>Embeds & Rich Messages <a href="#discord-embeds" class="anchor">#</a></h2>
+                    <p>Embeds are rich message formats that allow better formatting and organization.</p>
+
+                    <h3>Basic Embed</h3>
+                    <pre><code><span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">info</span>(ctx):
+    embed = discord.Embed(
+        title=<span class="string">"Bot Information"</span>,
+        description=<span class="string">"A helpful Discord bot"</span>,
+        color=discord.Color.blue()
+    )
+    
+    embed.add_field(name=<span class="string">"Version"</span>, value=<span class="string">"1.0.0"</span>, inline=<span class="keyword">True</span>)
+    embed.add_field(name=<span class="string">"Language"</span>, value=<span class="string">"Python"</span>, inline=<span class="keyword">True</span>)
+    embed.add_field(name=<span class="string">"Library"</span>, value=<span class="string">"discord.py"</span>, inline=<span class="keyword">True</span>)
+    
+    embed.set_footer(text=<span class="string">f"Requested by {ctx.author}"</span>, icon_url=ctx.author.avatar.url)
+    embed.set_thumbnail(url=bot.user.avatar.url)
+    embed.timestamp = discord.utils.utcnow()
+    
+    <span class="keyword">await</span> ctx.send(embed=embed)</code></pre>
+
+                    <h3>Advanced Embed Features</h3>
+                    <pre><code>embed = discord.Embed(
+    title=<span class="string">"Advanced Embed"</span>,
+    url=<span class="string">"https://example.com"</span>,
+    description=<span class="string">"This is a longer description that can span multiple lines."</span>,
+    color=<span class="number">0x00ff00</span>  <span class="comment"># Hex color</span>
+)
+
+<span class="comment"># Author section</span>
+embed.set_author(
+    name=<span class="string">"Author Name"</span>,
+    url=<span class="string">"https://example.com"</span>,
+    icon_url=<span class="string">"https://example.com/icon.png"</span>
+)
+
+<span class="comment"># Image (large image at bottom)</span>
+embed.set_image(url=<span class="string">"https://example.com/image.png"</span>)
+
+<span class="comment"># Thumbnail (small image in top right)</span>
+embed.set_thumbnail(url=<span class="string">"https://example.com/thumb.png"</span>)
+
+<span class="comment"># Footer</span>
+embed.set_footer(text=<span class="string">"Footer text"</span>, icon_url=<span class="string">"https://example.com/icon.png"</span>)
+
+<span class="comment"># Timestamp</span>
+embed.timestamp = discord.utils.utcnow()
+
+<span class="comment"># Multiple fields</span>
+embed.add_field(name=<span class="string">"Field 1"</span>, value=<span class="string">"Value 1"</span>, inline=<span class="keyword">False</span>)
+embed.add_field(name=<span class="string">"Field 2"</span>, value=<span class="string">"Value 2"</span>, inline=<span class="keyword">True</span>)
+embed.add_field(name=<span class="string">"Field 3"</span>, value=<span class="string">"Value 3"</span>, inline=<span class="keyword">True</span>)
+
+<span class="keyword">await</span> ctx.send(embed=embed)</code></pre>
+
+                    <h3>Color Presets</h3>
+                    <pre><code>discord.Color.red()
+discord.Color.blue()
+discord.Color.green()
+discord.Color.gold()
+discord.Color.purple()
+discord.Color.orange()
+discord.Color.teal()
+
+<span class="comment"># Random color</span>
+discord.Color.random()
+
+<span class="comment"># Custom hex color</span>
+discord.Color(<span class="number">0xFF5733</span>)
+
+<span class="comment"># From RGB</span>
+discord.Color.from_rgb(<span class="number">255</span>, <span class="number">87</span>, <span class="number">51</span>)</code></pre>
+
+                    <h3>Buttons and Select Menus</h3>
+                    <pre><code><span class="keyword">from</span> discord <span class="keyword">import</span> ui
+
+<span class="keyword">class</span> <span class="function">MyView</span>(ui.View):
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>):
+        <span class="keyword">super</span>().__init__()
+    
+    <span class="keyword">@ui.button</span>(label=<span class="string">"Click Me!"</span>, style=discord.ButtonStyle.green)
+    <span class="keyword">async def</span> <span class="function">button_callback</span>(<span class="keyword">self</span>, interaction: discord.Interaction, button: ui.Button):
+        <span class="keyword">await</span> interaction.response.send_message(<span class="string">"Button clicked!"</span>, ephemeral=<span class="keyword">True</span>)
+    
+    <span class="keyword">@ui.button</span>(label=<span class="string">"Delete"</span>, style=discord.ButtonStyle.red)
+    <span class="keyword">async def</span> <span class="function">delete_callback</span>(<span class="keyword">self</span>, interaction: discord.Interaction, button: ui.Button):
+        <span class="keyword">await</span> interaction.message.delete()
+
+<span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">buttons</span>(ctx):
+    view = MyView()
+    <span class="keyword">await</span> ctx.send(<span class="string">"Click a button!"</span>, view=view)</code></pre>
+
+                    <h3>Select Menu</h3>
+                    <pre><code><span class="keyword">class</span> <span class="function">DropdownView</span>(ui.View):
+    <span class="keyword">@ui.select</span>(
+        placeholder=<span class="string">"Choose a color..."</span>,
+        options=[
+            discord.SelectOption(label=<span class="string">"Red"</span>, emoji=<span class="string">"🔴"</span>),
+            discord.SelectOption(label=<span class="string">"Blue"</span>, emoji=<span class="string">"🔵"</span>),
+            discord.SelectOption(label=<span class="string">"Green"</span>, emoji=<span class="string">"🟢"</span>),
+        ]
+    )
+    <span class="keyword">async def</span> <span class="function">select_callback</span>(<span class="keyword">self</span>, interaction: discord.Interaction, select: ui.Select):
+        <span class="keyword">await</span> interaction.response.send_message(
+            <span class="string">f"You selected: {select.values[0]}"</span>,
+            ephemeral=<span class="keyword">True</span>
+        )
+
+<span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">dropdown</span>(ctx):
+    view = DropdownView()
+    <span class="keyword">await</span> ctx.send(<span class="string">"Select an option:"</span>, view=view)</code></pre>
+                </section>
+
+                <section id="discord-slash-commands">
+                    <h2>Slash Commands <a href="#discord-slash-commands" class="anchor">#</a></h2>
+                    <p>Slash commands are the modern way to interact with bots. They provide auto-completion and better
+                        UX.</p>
+
+                    <h3>Basic Slash Command</h3>
+                    <pre><code><span class="keyword">from</span> discord <span class="keyword">import</span> app_commands
+
+<span class="comment"># Sync commands with Discord</span>
+<span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_ready</span>():
+    <span class="keyword">await</span> bot.tree.sync()
+    <span class="keyword">print</span>(<span class="string">f'{bot.user} is ready!'</span>)
+
+<span class="comment"># Simple slash command</span>
+<span class="keyword">@bot.tree.command</span>(name=<span class="string">"hello"</span>, description=<span class="string">"Say hello"</span>)
+<span class="keyword">async def</span> <span class="function">hello</span>(interaction: discord.Interaction):
+    <span class="keyword">await</span> interaction.response.send_message(<span class="string">f'Hello, {interaction.user.mention}!'</span>)
+
+<span class="comment"># With parameters</span>
+<span class="keyword">@bot.tree.command</span>(name=<span class="string">"greet"</span>, description=<span class="string">"Greet someone"</span>)
+<span class="keyword">async def</span> <span class="function">greet</span>(interaction: discord.Interaction, name: <span class="function">str</span>):
+    <span class="keyword">await</span> interaction.response.send_message(<span class="string">f'Hello, {name}!'</span>)</code></pre>
+
+                    <h3>Slash Commands in Cogs</h3>
+                    <pre><code><span class="keyword">class</span> <span class="function">MyCog</span>(commands.Cog):
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, bot):
+        <span class="keyword">self</span>.bot = bot
+    
+    <span class="keyword">@app_commands.command</span>(name=<span class="string">"userinfo"</span>, description=<span class="string">"Get user information"</span>)
+    <span class="keyword">async def</span> <span class="function">userinfo</span>(<span class="keyword">self</span>, interaction: discord.Interaction, member: discord.Member = <span class="keyword">None</span>):
+        member = member <span class="keyword">or</span> interaction.user
+        
+        embed = discord.Embed(title=<span class="string">f"User: {member}"</span>, color=discord.Color.blue())
+        embed.add_field(name=<span class="string">"ID"</span>, value=member.id)
+        embed.add_field(name=<span class="string">"Created"</span>, value=member.created_at.strftime(<span class="string">"%Y-%m-%d"</span>))
+        
+        <span class="keyword">await</span> interaction.response.send_message(embed=embed)
+
+<span class="keyword">async def</span> <span class="function">setup</span>(bot):
+    cog = MyCog(bot)
+    <span class="keyword">await</span> bot.add_cog(cog)</code></pre>
+
+                    <h3>Choice Options</h3>
+                    <pre><code><span class="keyword">@bot.tree.command</span>(name=<span class="string">"choose"</span>, description=<span class="string">"Choose an option"</span>)
+<span class="keyword">@app_commands.choices</span>(option=[
+    app_commands.Choice(name=<span class="string">"Option 1"</span>, value=<span class="number">1</span>),
+    app_commands.Choice(name=<span class="string">"Option 2"</span>, value=<span class="number">2</span>),
+    app_commands.Choice(name=<span class="string">"Option 3"</span>, value=<span class="number">3</span>),
+])
+<span class="keyword">async def</span> <span class="function">choose</span>(interaction: discord.Interaction, option: app_commands.Choice[<span class="function">int</span>]):
+    <span class="keyword">await</span> interaction.response.send_message(<span class="string">f'You chose: {option.name}'</span>)</code></pre>
+
+                    <h3>Context Menus</h3>
+                    <pre><code><span class="comment"># User context menu (right-click on user)</span>
+<span class="keyword">@bot.tree.context_menu</span>(name=<span class="string">"Get User ID"</span>)
+<span class="keyword">async def</span> <span class="function">get_user_id</span>(interaction: discord.Interaction, member: discord.Member):
+    <span class="keyword">await</span> interaction.response.send_message(<span class="string">f'{member.mention} ID: {member.id}'</span>, ephemeral=<span class="keyword">True</span>)
+
+<span class="comment"># Message context menu (right-click on message)</span>
+<span class="keyword">@bot.tree.context_menu</span>(name=<span class="string">"Quote Message"</span>)
+<span class="keyword">async def</span> <span class="function">quote_message</span>(interaction: discord.Interaction, message: discord.Message):
+    <span class="keyword">await</span> interaction.response.send_message(<span class="string">f'> {message.content}\n- {message.author.mention}'</span>)</code></pre>
+                </section>
+
+                <section id="discord-database">
+                    <h2>Database Integration <a href="#discord-database" class="anchor">#</a></h2>
+                    <p>Persistent data storage is essential for most bots. Here are common database solutions.</p>
+
+                    <h3>SQLite (Built-in)</h3>
+                    <pre><code><span class="keyword">import</span> sqlite3
+<span class="keyword">import</span> aiosqlite
+
+<span class="comment"># Initialize database</span>
+<span class="keyword">async def</span> <span class="function">setup_database</span>():
+    <span class="keyword">async with</span> aiosqlite.connect(<span class="string">'bot.db'</span>) <span class="keyword">as</span> db:
+        <span class="keyword">await</span> db.execute(<span class="string">"""
+            CREATE TABLE IF NOT EXISTS users (
+                user_id INTEGER PRIMARY KEY,
+                coins INTEGER DEFAULT 0,
+                level INTEGER DEFAULT 1
+            )
+        """</span>)
+        <span class="keyword">await</span> db.commit()
+
+<span class="comment"># Add coins to user</span>
+<span class="keyword">async def</span> <span class="function">add_coins</span>(user_id, amount):
+    <span class="keyword">async with</span> aiosqlite.connect(<span class="string">'bot.db'</span>) <span class="keyword">as</span> db:
+        <span class="keyword">await</span> db.execute(<span class="string">"""
+            INSERT INTO users (user_id, coins) VALUES (?, ?)
+            ON CONFLICT(user_id) DO UPDATE SET coins = coins + ?
+        """</span>, (user_id, amount, amount))
+        <span class="keyword">await</span> db.commit()
+
+<span class="comment"># Get user coins</span>
+<span class="keyword">async def</span> <span class="function">get_coins</span>(user_id):
+    <span class="keyword">async with</span> aiosqlite.connect(<span class="string">'bot.db'</span>) <span class="keyword">as</span> db:
+        <span class="keyword">async with</span> db.execute(<span class="string">"SELECT coins FROM users WHERE user_id = ?"</span>, (user_id,)) <span class="keyword">as</span> cursor:
+            result = <span class="keyword">await</span> cursor.fetchone()
+            <span class="keyword">return</span> result[<span class="number">0</span>] <span class="keyword">if</span> result <span class="keyword">else</span> <span class="number">0</span>
+
+<span class="comment"># Use in commands</span>
+<span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">balance</span>(ctx):
+    coins = <span class="keyword">await</span> get_coins(ctx.author.id)
+    <span class="keyword">await</span> ctx.send(<span class="string">f'You have {coins} coins!'</span>)</code></pre>
+
+                    <h3>MongoDB with Motor</h3>
+                    <pre><code><span class="keyword">from</span> motor.motor_asyncio <span class="keyword">import</span> AsyncIOMotorClient
+
+<span class="comment"># Setup MongoDB connection</span>
+client = AsyncIOMotorClient(<span class="string">'mongodb://localhost:27017'</span>)
+db = client[<span class="string">'discord_bot'</span>]
+users = db[<span class="string">'users'</span>]
+
+<span class="comment"># Find or create user</span>
+<span class="keyword">async def</span> <span class="function">get_user</span>(user_id):
+    user = <span class="keyword">await</span> users.find_one({<span class="string">'_id'</span>: user_id})
+    <span class="keyword">if not</span> user:
+        user = {<span class="string">'_id'</span>: user_id, <span class="string">'coins'</span>: <span class="number">0</span>, <span class="string">'level'</span>: <span class="number">1</span>}
+        <span class="keyword">await</span> users.insert_one(user)
+    <span class="keyword">return</span> user
+
+<span class="comment"># Update user coins</span>
+<span class="keyword">async def</span> <span class="function">add_coins</span>(user_id, amount):
+    <span class="keyword">await</span> users.update_one(
+        {<span class="string">'_id'</span>: user_id},
+        {<span class="string">'$inc'</span>: {<span class="string">'coins'</span>: amount}},
+        upsert=<span class="keyword">True</span>
+    )
+
+<span class="comment"># Leaderboard</span>
+<span class="keyword">async def</span> <span class="function">get_leaderboard</span>(limit=<span class="number">10</span>):
+    cursor = users.find().sort(<span class="string">'coins'</span>, <span class="number">-1</span>).limit(limit)
+    <span class="keyword">return await</span> cursor.to_list(length=limit)</code></pre>
+
+                    <h3>PostgreSQL with asyncpg</h3>
+                    <pre><code><span class="keyword">import</span> asyncpg
+
+<span class="comment"># Create connection pool</span>
+<span class="keyword">async def</span> <span class="function">create_pool</span>():
+    <span class="keyword">return await</span> asyncpg.create_pool(
+        user=<span class="string">'postgres'</span>,
+        password=<span class="string">'password'</span>,
+        database=<span class="string">'discord_bot'</span>,
+        host=<span class="string">'localhost'</span>
+    )
+
+<span class="comment"># Initialize tables</span>
+<span class="keyword">async def</span> <span class="function">setup_database</span>(pool):
+    <span class="keyword">async with</span> pool.acquire() <span class="keyword">as</span> conn:
+        <span class="keyword">await</span> conn.execute(<span class="string">"""
+            CREATE TABLE IF NOT EXISTS users (
+                user_id BIGINT PRIMARY KEY,
+                coins INTEGER DEFAULT 0,
+                level INTEGER DEFAULT 1
+            )
+        """</span>)
+
+<span class="comment"># Use in bot</span>
+<span class="keyword">class</span> <span class="function">Bot</span>(commands.Bot):
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>):
+        <span class="keyword">super</span>().__init__(command_prefix=<span class="string">'!'</span>, intents=discord.Intents.default())
+        <span class="keyword">self</span>.pool = <span class="keyword">None</span>
+    
+    <span class="keyword">async def</span> <span class="function">setup_hook</span>(<span class="keyword">self</span>):
+        <span class="keyword">self</span>.pool = <span class="keyword">await</span> create_pool()
+        <span class="keyword">await</span> setup_database(<span class="keyword">self</span>.pool)
+
+bot = Bot()
+
+<span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">balance</span>(ctx):
+    <span class="keyword">async with</span> bot.pool.acquire() <span class="keyword">as</span> conn:
+        coins = <span class="keyword">await</span> conn.fetchval(
+            <span class="string">'SELECT coins FROM users WHERE user_id = $1'</span>,
+            ctx.author.id
+        )
+    <span class="keyword">await</span> ctx.send(<span class="string">f'Balance: {coins or 0} coins'</span>)</code></pre>
+                </section>
+
+                <section id="discord-advanced">
+                    <h2>Advanced Patterns <a href="#discord-advanced" class="anchor">#</a></h2>
+
+                    <h3>Paginator</h3>
+                    <pre><code><span class="keyword">class</span> <span class="function">Paginator</span>(discord.ui.View):
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="keyword">self</span>, embeds):
+        <span class="keyword">super</span>().__init__()
+        <span class="keyword">self</span>.embeds = embeds
+        <span class="keyword">self</span>.current_page = <span class="number">0</span>
+    
+    <span class="keyword">@discord.ui.button</span>(label=<span class="string">"Previous"</span>, style=discord.ButtonStyle.gray)
+    <span class="keyword">async def</span> <span class="function">previous_button</span>(<span class="keyword">self</span>, interaction: discord.Interaction, button: discord.ui.Button):
+        <span class="keyword">if self</span>.current_page > <span class="number">0</span>:
+            <span class="keyword">self</span>.current_page -= <span class="number">1</span>
+            <span class="keyword">await</span> interaction.response.edit_message(embed=<span class="keyword">self</span>.embeds[<span class="keyword">self</span>.current_page], view=<span class="keyword">self</span>)
+    
+    <span class="keyword">@discord.ui.button</span>(label=<span class="string">"Next"</span>, style=discord.ButtonStyle.gray)
+    <span class="keyword">async def</span> <span class="function">next_button</span>(<span class="keyword">self</span>, interaction: discord.Interaction, button: discord.ui.Button):
+        <span class="keyword">if self</span>.current_page < <span class="function">len</span>(<span class="keyword">self</span>.embeds) - <span class="number">1</span>:
+            <span class="keyword">self</span>.current_page += <span class="number">1</span>
+            <span class="keyword">await</span> interaction.response.edit_message(embed=<span class="keyword">self</span>.embeds[<span class="keyword">self</span>.current_page], view=<span class="keyword">self</span>)
+
+<span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">help_pages</span>(ctx):
+    embeds = [
+        discord.Embed(title=<span class="string">"Help - Page 1"</span>, description=<span class="string">"Commands page 1"</span>),
+        discord.Embed(title=<span class="string">"Help - Page 2"</span>, description=<span class="string">"Commands page 2"</span>),
+        discord.Embed(title=<span class="string">"Help - Page 3"</span>, description=<span class="string">"Commands page 3"</span>),
+    ]
+    view = Paginator(embeds)
+    <span class="keyword">await</span> ctx.send(embed=embeds[<span class="number">0</span>], view=view)</code></pre>
+
+                    <h3>Task Loops</h3>
+                    <pre><code><span class="keyword">from</span> discord.ext <span class="keyword">import</span> tasks
+
+<span class="keyword">@tasks.loop</span>(seconds=<span class="number">60</span>)
+<span class="keyword">async def</span> <span class="function">status_update</span>():
+    <span class="keyword">await</span> bot.change_presence(activity=discord.Game(name=<span class="string">f"{len(bot.guilds)} servers"</span>))
+
+<span class="keyword">@tasks.loop</span>(hours=<span class="number">24</span>)
+<span class="keyword">async def</span> <span class="function">daily_backup</span>():
+    <span class="comment"># Backup database, clean old data, etc.</span>
+    <span class="keyword">print</span>(<span class="string">"Running daily backup..."</span>)
+
+<span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_ready</span>():
+    status_update.start()
+    daily_backup.start()
+    <span class="keyword">print</span>(<span class="string">f'{bot.user} is online!'</span>)</code></pre>
+
+                    <h3>Reaction Roles</h3>
+                    <pre><code><span class="comment"># Setup reaction role message</span>
+<span class="keyword">@bot.command</span>()
+<span class="keyword">@commands.has_permissions</span>(administrator=<span class="keyword">True</span>)
+<span class="keyword">async def</span> <span class="function">setup_roles</span>(ctx):
+    embed = discord.Embed(
+        title=<span class="string">"Reaction Roles"</span>,
+        description=<span class="string">"React to get roles!"</span>
+    )
+    embed.add_field(name=<span class="string">"🎮"</span>, value=<span class="string">"Gamer"</span>)
+    embed.add_field(name=<span class="string">"🎨"</span>, value=<span class="string">"Artist"</span>)
+    embed.add_field(name=<span class="string">"💻"</span>, value=<span class="string">"Developer"</span>)
+    
+    msg = <span class="keyword">await</span> ctx.send(embed=embed)
+    <span class="keyword">await</span> msg.add_reaction(<span class="string">"🎮"</span>)
+    <span class="keyword">await</span> msg.add_reaction(<span class="string">"🎨"</span>)
+    <span class="keyword">await</span> msg.add_reaction(<span class="string">"💻"</span>)
+
+<span class="comment"># Handle reactions</span>
+<span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_raw_reaction_add</span>(payload):
+    <span class="keyword">if</span> payload.member == bot.user:
+        <span class="keyword">return</span>
+    
+    guild = bot.get_guild(payload.guild_id)
+    
+    role_map = {
+        <span class="string">"🎮"</span>: discord.utils.get(guild.roles, name=<span class="string">"Gamer"</span>),
+        <span class="string">"🎨"</span>: discord.utils.get(guild.roles, name=<span class="string">"Artist"</span>),
+        <span class="string">"💻"</span>: discord.utils.get(guild.roles, name=<span class="string">"Developer"</span>)
+    }
+    
+    role = role_map.get(<span class="function">str</span>(payload.emoji))
+    <span class="keyword">if</span> role:
+        <span class="keyword">await</span> payload.member.add_roles(role)
+
+<span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_raw_reaction_remove</span>(payload):
+    guild = bot.get_guild(payload.guild_id)
+    member = guild.get_member(payload.user_id)
+    
+    role_map = {
+        <span class="string">"🎮"</span>: discord.utils.get(guild.roles, name=<span class="string">"Gamer"</span>),
+        <span class="string">"🎨"</span>: discord.utils.get(guild.roles, name=<span class="string">"Artist"</span>),
+        <span class="string">"💻"</span>: discord.utils.get(guild.roles, name=<span class="string">"Developer"</span>)
+    }
+    
+    role = role_map.get(<span class="function">str</span>(payload.emoji))
+    <span class="keyword">if</span> role <span class="keyword">and</span> member:
+        <span class="keyword">await</span> member.remove_roles(role)</code></pre>
+
+                    <h3>Moderation: Auto-Mod</h3>
+                    <pre><code><span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_message</span>(message):
+    <span class="keyword">if</span> message.author.bot:
+        <span class="keyword">return</span>
+    
+    <span class="comment"># Anti-spam</span>
+    <span class="keyword">if len</span>(message.content) > <span class="number">500</span>:
+        <span class="keyword">await</span> message.delete()
+        <span class="keyword">await</span> message.channel.send(<span class="string">f'{message.author.mention} No spam!'</span>, delete_after=<span class="number">3</span>)
+        <span class="keyword">return</span>
+    
+    <span class="comment"># Bad words filter</span>
+    bad_words = [<span class="string">'badword1'</span>, <span class="string">'badword2'</span>]
+    <span class="keyword">if any</span>(word <span class="keyword">in</span> message.content.lower() <span class="keyword">for</span> word <span class="keyword">in</span> bad_words):
+        <span class="keyword">await</span> message.delete()
+        <span class="keyword">await</span> message.author.timeout(discord.utils.utcnow() + timedelta(minutes=<span class="number">5</span>))
+        <span class="keyword">return</span>
+    
+    <span class="keyword">await</span> bot.process_commands(message)</code></pre>
+
+                    <h3>Webhook Integration</h3>
+                    <pre><code><span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">create_webhook</span>(ctx):
+    webhook = <span class="keyword">await</span> ctx.channel.create_webhook(name=<span class="string">"My Webhook"</span>)
+    <span class="keyword">await</span> webhook.send(<span class="string">"Hello from webhook!"</span>, username=<span class="string">"Bot Name"</span>)
+    <span class="keyword">await</span> webhook.delete()
+
+<span class="comment"># Send embed via webhook</span>
+<span class="keyword">@bot.command</span>()
+<span class="keyword">async def</span> <span class="function">announce</span>(ctx, *, message):
+    webhooks = <span class="keyword">await</span> ctx.channel.webhooks()
+    webhook = webhooks[<span class="number">0</span>] <span class="keyword">if</span> webhooks <span class="keyword">else await</span> ctx.channel.create_webhook(name=<span class="string">"Announcer"</span>)
+    
+    embed = discord.Embed(
+        title=<span class="string">"Announcement"</span>,
+        description=message,
+        color=discord.Color.gold()
+    )
+    
+    <span class="keyword">await</span> webhook.send(embed=embed, username=<span class="string">"Server Announcements"</span>)</code></pre>
+                </section>
+
+                <section id="cheatsheet">
+                    <h2>Quick Reference <a href="#cheatsheet" class="anchor">#</a></h2>
+
+                    <h3>Essential Python Syntax</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Syntax</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Variables</td>
+                                <td><code>x = value</code></td>
+                                <td><code>age = 25</code></td>
+                            </tr>
+                            <tr>
+                                <td>Print</td>
+                                <td><code>print()</code></td>
+                                <td><code>print("Hello")</code></td>
+                            </tr>
+                            <tr>
+                                <td>Input</td>
+                                <td><code>input()</code></td>
+                                <td><code>name = input("Name: ")</code></td>
+                            </tr>
+                            <tr>
+                                <td>If Statement</td>
+                                <td><code>if condition:</code></td>
+                                <td><code>if x > 5:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Yes")</code></td>
+                            </tr>
+                            <tr>
+                                <td>For Loop</td>
+                                <td><code>for item in sequence:</code></td>
+                                <td><code>for i in range(10):<br>&nbsp;&nbsp;&nbsp;&nbsp;print(i)</code></td>
+                            </tr>
+                            <tr>
+                                <td>While Loop</td>
+                                <td><code>while condition:</code></td>
+                                <td><code>while x < 10:<br>&nbsp;&nbsp;&nbsp;&nbsp;x += 1</code></td>
+                            </tr>
+                            <tr>
+                                <td>Function</td>
+                                <td><code>def name(params):</code></td>
+                                <td><code>def greet(name):<br>&nbsp;&nbsp;&nbsp;&nbsp;return f"Hi {name}"</code></td>
+                            </tr>
+                            <tr>
+                                <td>Class</td>
+                                <td><code>class Name:</code></td>
+                                <td><code>class Dog:<br>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Import</td>
+                                <td><code>import module</code></td>
+                                <td><code>import math</code></td>
+                            </tr>
+                            <tr>
+                                <td>Try/Except</td>
+                                <td><code>try: ... except:</code></td>
+                                <td><code>try:<br>&nbsp;&nbsp;&nbsp;&nbsp;x = 1/0<br>except:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Error")</code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Discord.py Quick Commands</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Task</th>
+                                <th>Code</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Send Message</td>
+                                <td><code>await ctx.send("message")</code></td>
+                            </tr>
+                            <tr>
+                                <td>Send Embed</td>
+                                <td><code>await ctx.send(embed=embed)</code></td>
+                            </tr>
+                            <tr>
+                                <td>Delete Message</td>
+                                <td><code>await message.delete()</code></td>
+                            </tr>
+                            <tr>
+                                <td>Add Reaction</td>
+                                <td><code>await message.add_reaction("👍")</code></td>
+                            </tr>
+                            <tr>
+                                <td>Kick Member</td>
+                                <td><code>await member.kick(reason="...")</code></td>
+                            </tr>
+                            <tr>
+                                <td>Ban Member</td>
+                                <td><code>await member.ban(reason="...")</code></td>
+                            </tr>
+                            <tr>
+                                <td>Add Role</td>
+                                <td><code>await member.add_roles(role)</code></td>
+                            </tr>
+                            <tr>
+                                <td>Remove Role</td>
+                                <td><code>await member.remove_roles(role)</code></td>
+                            </tr>
+                            <tr>
+                                <td>Edit Channel</td>
+                                <td><code>await channel.edit(name="new-name")</code></td>
+                            </tr>
+                            <tr>
+                                <td>Create Channel</td>
+                                <td><code>await guild.create_text_channel("name")</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="common-errors">
+                    <h2>Common Errors & Solutions <a href="#common-errors" class="anchor">#</a></h2>
+
+                    <h3>Python Errors</h3>
+                    <pre><code><span class="comment"># IndentationError</span>
+<span class="comment"># Problem: Incorrect indentation</span>
+<span class="keyword">if</span> <span class="keyword">True</span>:
+<span class="keyword">print</span>(<span class="string">"Wrong"</span>)  <span class="comment"># Error!</span>
+
+<span class="comment"># Solution: Use 4 spaces</span>
+<span class="keyword">if</span> <span class="keyword">True</span>:
+    <span class="keyword">print</span>(<span class="string">"Correct"</span>)
+
+<span class="comment"># NameError</span>
+<span class="comment"># Problem: Variable doesn't exist</span>
+<span class="keyword">print</span>(x)  <span class="comment"># Error if x not defined</span>
+
+<span class="comment"># Solution: Define variable first</span>
+x = <span class="number">10</span>
+<span class="keyword">print</span>(x)
+
+<span class="comment"># TypeError</span>
+<span class="comment"># Problem: Wrong type operation</span>
+result = <span class="string">"5"</span> + <span class="number">5</span>  <span class="comment"># Error!</span>
+
+<span class="comment"># Solution: Convert types</span>
+result = <span class="function">int</span>(<span class="string">"5"</span>) + <span class="number">5</span>  <span class="comment"># 10</span>
+
+<span class="comment"># IndexError</span>
+<span class="comment"># Problem: Index out of range</span>
+lst = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
+<span class="keyword">print</span>(lst[<span class="number">10</span>])  <span class="comment"># Error!</span>
+
+<span class="comment"># Solution: Check length or use try/except</span>
+<span class="keyword">if len</span>(lst) > <span class="number">10</span>:
+    <span class="keyword">print</span>(lst[<span class="number">10</span>])
+
+<span class="comment"># KeyError</span>
+<span class="comment"># Problem: Dictionary key doesn't exist</span>
+d = {<span class="string">"name"</span>: <span class="string">"Alice"</span>}
+<span class="keyword">print</span>(d[<span class="string">"age"</span>])  <span class="comment"># Error!</span>
+
+<span class="comment"># Solution: Use .get() or check first</span>
+<span class="keyword">print</span>(d.get(<span class="string">"age"</span>, <span class="string">"Not found"</span>))  <span class="comment"># "Not found"</span></code></pre>
+
+                    <h3>Discord.py Errors</h3>
+                    <pre><code><span class="comment"># Missing Intents</span>
+<span class="comment"># Problem: Bot can't see message content</span>
+bot = commands.Bot(command_prefix=<span class="string">'!'</span>, intents=discord.Intents.default())
+
+<span class="comment"># Solution: Enable message content intent</span>
+intents = discord.Intents.default()
+intents.message_content = <span class="keyword">True</span>
+bot = commands.Bot(command_prefix=<span class="string">'!'</span>, intents=intents)
+
+<span class="comment"># Missing Permissions</span>
+<span class="comment"># Problem: Bot can't perform action</span>
+<span class="comment"># Solution: Check bot permissions in server settings</span>
+
+<span class="comment"># Forbidden Error</span>
+<span class="comment"># Problem: Bot lacks permission for action</span>
+<span class="keyword">try</span>:
+    <span class="keyword">await</span> member.kick()
+<span class="keyword">except</span> discord.Forbidden:
+    <span class="keyword">await</span> ctx.send(<span class="string">"I don't have permission to do that!"</span>)
+
+<span class="comment"># CommandNotFound</span>
+<span class="comment"># Problem: User typed wrong command</span>
+<span class="comment"># Solution: Implement error handler</span>
+<span class="keyword">@bot.event</span>
+<span class="keyword">async def</span> <span class="function">on_command_error</span>(ctx, error):
+    <span class="keyword">if</span> <span class="function">isinstance</span>(error, commands.CommandNotFound):
+        <span class="keyword">await</span> ctx.send(<span class="string">"Command not found!"</span>)</code></pre>
+                </section>
+
+                <section id="external-resources">
+                    <h2>External Resources <a href="#external-resources" class="anchor">#</a></h2>
+
+                    <h3>Official Documentation</h3>
+                    <ul>
+                        <li><a href="https://docs.python.org/" target="_blank">Python Official Docs</a></li>
+                        <li><a href="https://discordpy.readthedocs.io/" target="_blank">discord.py Documentation</a>
+                        </li>
+                        <li><a href="https://peps.python.org/pep-0008/" target="_blank">PEP 8 Style Guide</a></li>
+                    </ul>
+
+                    <h3>Learning Platforms</h3>
+                    <ul>
+                        <li><a href="https://realpython.com/" target="_blank">Real Python</a> - Tutorials and articles
+                        </li>
+                        <li><a href="https://www.python.org/dev/peps/" target="_blank">Python Enhancement Proposals</a>
+                        </li>
+                        <li><a href="https://github.com/Rapptz/discord.py/tree/master/examples"
+                                target="_blank">discord.py Examples</a>
+                        </li>
+                    </ul>
+
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="https://www.reddit.com/r/learnpython/" target="_blank">r/learnpython</a> - Reddit
+                            community</li>
+                        <li><a href="https://discord.gg/python" target="_blank">Python Discord Server</a></li>
+                        <li><a href="https://discord.gg/dpy" target="_blank">discord.py Discord Server</a></li>
+                        <li><a href="https://stackoverflow.com/questions/tagged/python" target="_blank">Stack Overflow -
+                                Python</a></li>
+                    </ul>
+
+                    <h3>Tools & Libraries</h3>
+                    <ul>
+                        <li><a href="https://pypi.org/" target="_blank">PyPI</a> - Python Package Index</li>
+                        <li><a href="https://github.com/" target="_blank">GitHub</a> - Code hosting and collaboration
+                        </li>
+                        <li><a href="https://code.visualstudio.com/" target="_blank">VS Code</a> - Code editor</li>
+                        <li><a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a> - Python IDE</li>
+                    </ul>
+
+                    <h3>Books (Recommended)</h3>
+                    <ul>
+                        <li>"Automate the Boring Stuff with Python" by Al Sweigart</li>
+                        <li>"Python Crash Course" by Eric Matthes</li>
+                        <li>"Fluent Python" by Luciano Ramalho</li>
+                        <li>"Effective Python" by Brett Slatkin</li>
+                    </ul>
+                </section>
+
+                <!-- Final Footer -->
+                <div class="footer">
+                    <p><strong>Python Documentation - Complete Guide</strong></p>
+                    <p>From beginner to professional • Discord bot development included</p>
+                    <p>Open source, free forever, no ads, no tracking</p>
+                    <p style="margin-top: 16px; font-size: 12px; color: var(--text-secondary);">
+                        Made with 🐍 • Last updated: February 2026<br>
+                        <a href="https://github.com/python" target="_blank">Python GitHub</a> •
+                        <a href="https://discordpy.readthedocs.io/" target="_blank">discord.py Docs</a>
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
